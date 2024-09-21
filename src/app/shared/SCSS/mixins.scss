@@ -1,0 +1,31 @@
+@mixin flexbox($fd: row, $jc: center, $ai: center, $g: 0px) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+  }
+  
+  @mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+  }
+  
+  @mixin bgCover($s: cover, $p: center) {
+    background-repeat: no-repeat;
+    background-size: $s;
+    background-position: $p;
+  }
+  
+  @mixin randomBorder($width: 1px) {
+    $red: random(255);
+    $green: random(255);
+    $blue: random(255);
+    border: $width dashed rgb($red, $green, $blue);
+  }
+  
+  @mixin curserPointer {
+    &:hover {
+      cursor: pointer;
+    }
+  }
