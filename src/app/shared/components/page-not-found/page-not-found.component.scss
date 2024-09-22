@@ -1,13 +1,10 @@
 @import "../../../shared/SCSS/colors.scss";
 @import "../../../shared/SCSS/mixins.scss";
+@import "../../../../styles.scss";
 
 section {
   @include flexbox($fd: column, $g: 2rem);
   height: 100dvh;
-
-  img {
-    width: 100px;
-  }
 
   .card {
     @include flexbox($fd: column, $g: 2rem);
@@ -16,6 +13,14 @@ section {
     padding: 1rem;
     background-color: $clr_card;
     border-radius: $border_radius_card;
+    box-shadow: $box_shadow;
+
+    h1 {
+      text-align: center;
+      font-weight: 500;
+      font-size: 2rem;
+      margin: 0;
+    }
 
     > p {
       word-break: break-all;
