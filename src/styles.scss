@@ -1,5 +1,6 @@
-@import "mixins.scss";
-@import "colors.scss";
+@import "./app/shared/SCSS/colors.scss";
+@import "./app/shared/SCSS/mixins.scss";
+@import "./app/shared/SCSS/variables.scss";
 
 * {
   box-sizing: border-box;

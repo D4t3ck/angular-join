@@ -1,0 +1,24 @@
+@import "../../../shared/SCSS/colors.scss";
+@import "../../../shared/SCSS/mixins.scss";
+
+section {
+  @include flexbox($fd: column, $g: 2rem);
+  height: 100dvh;
+
+  img {
+    width: 100px;
+  }
+
+  .card {
+    @include flexbox($fd: column, $g: 2rem);
+    min-width: 250px;
+    height: 50%;
+    padding: 1rem;
+    background-color: $clr_card;
+    border-radius: $border_radius_card;
+
+    > p {
+      word-break: break-all;
+    }
+  }
+}
