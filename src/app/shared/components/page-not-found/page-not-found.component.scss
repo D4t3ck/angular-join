@@ -10,20 +10,22 @@ section {
     @include flexbox($fd: column, $g: 2rem);
     min-width: 250px;
     height: 50%;
+    margin-inline: 1rem;
     padding: 1rem;
     background-color: $clr_card;
     border-radius: $border_radius_card;
     box-shadow: $box_shadow;
 
-    h1 {
-      text-align: center;
+    :first-child {
+      text-align: start;
       font-weight: 500;
       font-size: 2rem;
       margin: 0;
     }
 
-    > p {
-      word-break: break-all;
+    :nth-child(2) {
+      text-align: center;
+      font-size: clamp(1rem, 2vw, 1.5rem);
     }
   }
 }

@@ -1,6 +1,7 @@
 @import "./app/shared/SCSS/colors.scss";
 @import "./app/shared/SCSS/mixins.scss";
 @import "./app/shared/SCSS/variables.scss";
+@import "./app/shared/SCSS/font.scss";
 
 * {
   box-sizing: border-box;
@@ -14,6 +15,7 @@ body {
 html,
 body {
   height: 100%;
+  font-family: "Inter", Helvetica, sans-serif;
 }
 
 .d-none {
@@ -44,6 +46,7 @@ body {
   border: none;
   padding: 0.8rem;
   font-size: 1rem;
+  font-family: "Inter", Helvetica, sans-serif;
   background-color: $clr_dark_gray;
   color: $clr_card;
   border-radius: $border_radius_input;
