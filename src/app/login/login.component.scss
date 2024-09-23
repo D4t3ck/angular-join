@@ -1,0 +1,35 @@
+@import "../shared/SCSS/colors.scss";
+@import "../shared/SCSS/mixins.scss";
+@import "../shared/SCSS/variables.scss";
+
+section {
+  @include flexbox($jc: space-evenly, $fd: column);
+  height: 100dvh;
+
+  .card {
+    max-width: 550px;
+    width: 280px;
+    min-height: 515px;
+    padding: 1rem;
+    margin-inline: 1rem;
+
+    h1 {
+      position: relative;
+      margin: 0;
+      text-align: center;
+      font-size: 47px;
+      font-weight: 700;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        width: 80px;
+        height: 3px;
+        transform: translateX(-50%);
+        background-color: $clr_light_blue;
+      }
+    }
+  }
+}
