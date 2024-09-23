@@ -6,15 +6,16 @@ section {
   @include flexbox($fd: column, $g: 2rem);
   height: 100dvh;
 
+  img {
+    width: 80px;
+  }
+
   .card {
     @include flexbox($fd: column, $g: 2rem);
     min-width: 250px;
     height: 50%;
     margin-inline: 1rem;
     padding: 1rem;
-    background-color: $clr_card;
-    border-radius: $border_radius_card;
-    box-shadow: $box_shadow;
 
     :first-child {
       text-align: start;
@@ -25,7 +26,7 @@ section {
 
     :nth-child(2) {
       text-align: center;
-      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-size: clamp(1.3rem, 2vw, 1.5rem);
     }
   }
 }
