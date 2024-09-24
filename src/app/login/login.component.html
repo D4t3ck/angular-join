@@ -3,10 +3,24 @@
     <img src="/img/logIn/logo_mobil.png" alt="Logo" />
   </div> -->
   <div class="card card_wrapper">
-    <h1>Log in</h1>
+    <h1>Log in
+      <div class="border-bottom"></div>
+    </h1>
 
     <form class="login_form">
-        
+      <div class="input-layout">
+        <div class="input-field">
+          <input
+            autocomplete="email"
+            placeholder="Email"
+            formControlName="email"
+            required="true"
+          />
+          <div class="icon">
+            <img src="/img/logIn/mail.png" alt="E-Mail" />
+          </div>
+        </div>
+      </div>
     </form>
   </div>
 </section>
