@@ -5,75 +5,82 @@
 section {
   @include flexbox($jc: space-evenly, $fd: column);
   height: 100dvh;
+}
 
-  .card {
-    @include flexbox($fd: column, $g: 2rem);
-    width: clamp(300px, 50%, 650px);
-    max-height: 500px;
+.card {
+  @include flexbox($fd: column, $g: 2rem);
+  width: clamp(300px, 50%, 650px);
+  max-height: 500px;
+  height: 100%;
+  margin-inline: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+
+  .seperator {
+    height: 0px;
+    width: 150px;
+    border-bottom: 3px solid $clr_light_blue;
+    margin-top: 1rem;
+  }
+}
+
+.login_form {
+  @include randomBorder;
+  @include flexbox($fd: column, $g: 2rem);
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  padding: 1rem;
+
+  .input_layout {
+    @include randomBorder;
+    @include flexbox($jc: none, $fd: column, $g: 1.5rem);
+    max-width: 420px;
+    width: 100%;
+    height: 150px;
     height: 100%;
-    margin-inline: 1rem;
-    padding: 1rem;
 
-    h1 {
-      position: relative;
-      margin: 0;
-      text-align: center;
-      font-size: 3em;
-      font-weight: 700;
-
-      .seperator {
-        height: 0px;
-        width: 150px;
-        border-bottom: 3px solid $clr_light_blue;
-        margin-top: 1rem;
-      }
-    }
-
-    .login_form {
-      @include randomBorder;
-      @include flexbox($fd: column, $g: 2rem);
+    .input_field {
+      @include flexbox($jc: space-between, $g: 0.5rem);
+      max-width: clamp(360px, 100%, 420px);
       width: 100%;
-      max-height: 500px;
-      height: 100%;
-      padding: 1rem;
+      height: 3rem;
+      padding: 0 1.5rem;
+      border: 1px solid $clr_font_light;
+      border-radius: $border_radius_input;
 
-      .input_layout {
-        @include randomBorder;
-        @include flexbox($jc: none, $fd: column, $g: 2rem);
+      input {
+        border: none;
+        height: 1.5rem;
         width: 100%;
-        height: 150px;
-        height: 100%;
+        font-size: 1em;
+      }
+
+      input::placeholder {
+        font-size: 1em;
+        color: $clr-font-light;
+      }
+
+      /* input:focus-visible {
+        outline: none;
+      } */
+
+      .icon {
+        display: flex;
       }
     }
   }
 }
 
-.input_field {
-  @include flexbox($jc: space-between, $g: 0.5rem);
-  max-width: clamp(360px, 100%, 420px);
+.pw_check {
+  @include randomBorder;
+  @include flexbox($jc: flex-start, $g: 1rem);
   width: 100%;
-  height: 3rem;
-  padding: 0 1.5rem;
-  border: 1px solid $clr_font_light;
-  border-radius: $border_radius_input;
-
-  input {
-    border: none;
-    height: 1.5rem;
-    width: 100%;
-    font-size: 1em;
-  }
-
-  input::placeholder {
-    font-size: 1em;
-    color: $clr-font-light;
-  }
-
-  /* input:focus-visible {
-    outline: none;
-  } */
-
-  .icon {
-    display: flex;
-  }
 }
