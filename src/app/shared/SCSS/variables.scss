@@ -29,6 +29,7 @@ $linear_gradient_hvr_light_grey: linear_gradient(
   background-color: $clr_sidebar_active;
   color: $clr_bg;
   border-radius: $border_radius_input;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 
   &:hover {
     cursor: pointer;
@@ -48,6 +49,7 @@ $linear_gradient_hvr_light_grey: linear_gradient(
   background-color: $clr_card;
   color: $clr_sidebar_active;
   border-radius: $border_radius_input;
+  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
   &:hover {
     cursor: pointer;
