@@ -8,16 +8,14 @@ section {
 }
 
 .head_wrapper {
- display: flex;
- justify-content: space-around;
- width: 100%;
-
- .sign_up_container {
   display: flex;
-  gap: 1rem;
+  justify-content: space-around;
+  width: 100%;
 
-  
- }
+  .sign_up_container {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 .card {
@@ -45,7 +43,7 @@ h1 {
 }
 
 .login_form {
-  @include randomBorder;
+  
   @include flexbox($fd: column, $g: 2rem);
   width: 100%;
   max-height: 500px;
@@ -53,7 +51,6 @@ h1 {
   padding: 1rem;
 
   .input_layout {
-    @include randomBorder;
     @include flexbox($jc: none, $fd: column, $g: 1.5rem);
     max-width: 420px;
     width: 100%;
@@ -92,12 +89,31 @@ h1 {
   }
 }
 
-.pw_check {
+.password_check {
   @include flexbox($g: 1rem);
   width: 100%;
 
-  > img {
-    @include curserPointer;
+  .password_checkbox {
+    @include flexbox($g: 1rem);
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .checkmark {
+     @include box(1.5rem);
+      cursor: pointer;
+      display: inline-block;
+      transition: opacity 0.3s ease;
+    }
+    
+    input[type="checkbox"]:not(:checked) + .checkmark {
+      content: url("../../../public/img/logIn/unchecked.png");
+    }
+
+    input[type="checkbox"]:checked + .checkmark {
+      content: url("../../../public/img/logIn/checked.png");
+    }
   }
 }
 
