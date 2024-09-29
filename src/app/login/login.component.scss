@@ -11,12 +11,12 @@ section {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
 
-  .sign_up_container {
-    display: flex;
-    gap: 1rem;
-    margin-right: 10rem;
-  }
+.sign_up_desktop {
+  display: flex;
+  gap: 1rem;
+  margin-right: 10rem;
 }
 
 .sign_up_mobile {
@@ -148,5 +148,20 @@ h1 {
       font-weight: bold;
       color: $clr_light_blue;
     }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .buttons_wrapper {
+    flex-direction: column;
+  }
+
+  .sign_up_desktop {
+    display: none;
+  }
+
+  .sign_up_mobile {
+    display: flex;
+    margin-top: 1rem;
   }
 }
