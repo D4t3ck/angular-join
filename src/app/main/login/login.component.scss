@@ -1,6 +1,6 @@
-@import "../shared/SCSS/colors.scss";
-@import "../shared/SCSS/mixins.scss";
-@import "../shared/SCSS/variables.scss";
+@import "../../shared/SCSS/colors.scss";
+@import "../../shared/SCSS/mixins.scss";
+@import "../../shared/SCSS/variables.scss";
 
 section {
   @include flexbox($jc: space-evenly, $fd: column);
@@ -51,7 +51,7 @@ h1 {
   }
 }
 
-.login_form {
+/* .login_form {
   @include flexbox($fd: column, $g: 2rem);
   width: 100%;
   max-height: 500px;
@@ -99,6 +99,82 @@ h1 {
       }
     }
   }
+} */
+
+.login_form {
+  @include flexbox($fd: column, $g: 2rem);
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  padding: 1rem;
+
+  .input_layout {
+    @include flexbox($jc: none, $fd: column, $g: 1.5rem);
+    max-width: 420px;
+    width: 100%;
+    height: 100%;
+
+    .input_field {
+      position: relative;
+      @include flexbox($jc: space-between, $g: 0.5rem);
+      max-width: clamp(360px, 100%, 420px);
+      width: 100%;
+      height: 3rem;
+      padding: 0 1.5rem;
+      border: 1px solid $clr_font_light;
+      border-radius: $border_radius_input;
+
+      input {
+        border: none;
+        height: 1.5rem;
+        width: 100%;
+        font-size: 1em;
+        background: transparent;
+        color: $clr_sidebar_active;
+
+        &::placeholder {
+          font-size: 1em;
+          color: transparent;
+        }
+
+        &:focus::placeholder {
+          color: transparent;
+        }
+
+        &:focus ~ label,
+        &:not(:placeholder-shown) ~ label {
+          top: -0.2rem;
+          left: 1rem;
+          font-size: 0.8rem;
+          background: white;
+          padding: 0 0.3rem;
+          color: $clr_light_blue;
+        }
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+
+      label {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        font-size: 1em;
+        color: $clr_font_light;
+        background: transparent;
+        padding: 0 0.5rem;
+        pointer-events: none;
+        transition: all 0.3s ease;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
 }
 
 .password_check {
@@ -120,11 +196,11 @@ h1 {
     }
 
     input[type="checkbox"]:not(:checked) + .checkmark {
-      content: url("../../../public/img/logIn/unchecked.png");
+      content: url("../../../../public/img/logIn/unchecked.png");
     }
 
     input[type="checkbox"]:checked + .checkmark {
-      content: url("../../../public/img/logIn/checked.png");
+      content: url("../../../../public/img/logIn/checked.png");
     }
   }
 }

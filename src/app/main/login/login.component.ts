@@ -18,4 +18,8 @@ export class LoginComponent {
   linkToPrivacyPolicy() {
     this.router.navigate(['privacy-policy-blank']);
   }
+
+  linkToSignUp() {
+    this.router.navigate(['signup']);
+  }
 }
