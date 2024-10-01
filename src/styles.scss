@@ -48,21 +48,3 @@ body {
   border-radius: $border_radius_card;
   box-shadow: $box_shadow;
 }
-
-.btn {
-  border: none;
-  padding: 0.8rem;
-  font-size: 1rem;
-  font-family: "Inter", Helvetica, sans-serif;
-  background-color: $clr_dark_gray;
-  color: $clr_card;
-  border-radius: $border_radius_input;
-  box-shadow: $card_box_shadow;
-
-  &:hover {
-    cursor: pointer;
-    background-color: $clr_light_blue;
-    border-color: $clr_light_blue;
-    box-shadow: $btn_hvr_box_shadow;
-  }
-}

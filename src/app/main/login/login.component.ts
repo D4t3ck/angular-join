@@ -9,7 +9,6 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-
   constructor(private router: Router) {}
 
   linkToImprint() {

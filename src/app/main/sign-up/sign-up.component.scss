@@ -1,0 +1,17 @@
+@import "../../shared/SCSS/colors.scss";
+@import "../../shared/SCSS/mixins.scss";
+@import "../../shared/SCSS/variables.scss";
+
+section {
+  @include flexbox($jc: space-evenly, $fd: column);
+  height: 100dvh;
+}
+
+.head_wrapper {
+  @include flexbox($jc: space-between);
+  width: 100%;
+
+  .logo_img {
+    margin-left: 10rem;
+  }
+}
