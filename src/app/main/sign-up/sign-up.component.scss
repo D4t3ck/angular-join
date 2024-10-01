@@ -15,3 +15,66 @@ section {
     margin-left: 10rem;
   }
 }
+
+.card {
+  @include flexbox($fd: column, $g: 2rem);
+  width: clamp(300px, 50%, 550px);
+  max-height: 500px;
+  height: 100%;
+  margin-inline: 1rem;
+  padding: 1rem;
+}
+
+.card_head {
+  @include flexbox;
+  position: relative;
+
+  > img {
+    position: absolute;
+    left: -100px;
+  }
+}
+
+h1 {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+
+  .seperator {
+    height: 0px;
+    width: 150px;
+    border-bottom: 3px solid $clr_light_blue;
+    margin-top: 1rem;
+  }
+}
+
+.legal_informations {
+    @include flexbox($g: 1rem);
+    width: 100%;
+  
+    p {
+      width: 130px;
+      padding: 0.5rem;
+      color: $clr_font_light_grey;
+      font-size: 16px;
+      font-weight: 200;
+      text-align: center;
+  
+      &:hover {
+        cursor: pointer;
+        font-weight: bold;
+        color: $clr_light_blue;
+      }
+    }
+  }
+
+@media only screen and (max-width: 750px) {
+  .head_wrapper {
+    .logo_img {
+      @include box(70px, 80px);
+      margin-left: 1rem;
+    }
+  }
+}
