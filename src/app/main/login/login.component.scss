@@ -132,12 +132,11 @@ h1 {
         background: transparent;
         color: $clr_sidebar_active;
 
-        &::placeholder {
-          font-size: 1em;
+        &:focus::placeholder {
           color: transparent;
         }
 
-        &:focus::placeholder {
+        &:not(:focus) ~ label {
           color: transparent;
         }
 
@@ -149,6 +148,7 @@ h1 {
           background: white;
           padding: 0 0.3rem;
           color: $clr_light_blue;
+          transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease; // Animation hinzugefügt
         }
 
         &:focus-visible {
@@ -166,7 +166,7 @@ h1 {
         background: transparent;
         padding: 0 0.5rem;
         pointer-events: none;
-        transition: all 0.3s ease;
+        transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease; // Animation für das Label
       }
 
       .icon {

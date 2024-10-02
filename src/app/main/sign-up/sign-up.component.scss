@@ -29,10 +29,9 @@ section {
   @include flexbox($g: 1rem);
   position: relative;
 
-  /* > img {
-    position: absolute;
-    left: -100px;
-  } */
+  > img {
+    cursor: pointer;
+  }
 }
 
 h1 {
@@ -78,3 +77,4 @@ h1 {
     }
   }
 }
+
