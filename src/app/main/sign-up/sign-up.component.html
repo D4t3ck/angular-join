@@ -12,16 +12,82 @@
       </h1>
     </div>
 
+    <form class="login_form" action="">
+      <div class="input_layout">
+        <div class="input_field">
+
+          <input placeholder="Name" formControlName="email" required />
+          <label>Name</label>
+          <div class="icon">
+            <img src="/img/logIn/person.png" alt="E-Mail" />
+          </div>
+        </div>
+
+        <div class="input_field">
+          <input
+            autocomplete="email"
+            placeholder="E-Mail "
+            formControlName="email"
+            required
+          />
+          <label>E-Mail</label>
+          <div class="icon">
+            <img src="/img/logIn/mail.png" alt="E-Mail" />
+          </div>
+        </div>
+
+        <div class="input_field" id="pwField">
+          <input
+            id="password"
+            autocomplete="current-password"
+            type="password"
+            placeholder=" Password"
+            formControlName="password"
+            required
+          />
+          <label>Password</label>
+          <div class="icon">
+            <img id="logInpwIcon" src="/img/logIn/lock.png" alt="Lock" />
+          </div>
+        </div>
+
+        <div class="input_field">
+          <input
+            id="passwordConfirm"
+            autocomplete="current-password"
+            type="password"
+            placeholder="Confirm Password"
+            formControlName="password"
+            required
+          />
+          <label>Confirm Password</label>
+          <div class="icon">
+            <img id="logInpwIcon" src="/img/logIn/lock.png" alt="Lock" />
+          </div>
+        </div>
 
 
+        <div class="password_check">
+          <label class="password_checkbox">
+            <input type="checkbox" />
+            <img
+              src="img/logIn/unchecked.png"
+              alt="Checkbox aktiv"
+              class="checkmark"
+            />
+          </label>
+          <p>I accept the <span class="privacy_policy" routerLink="/privacy-policy-blank">Privacy Policy</span></p>
+        </div>
 
+        <div class="buttons_wrapper">
+          <button class="button_full">Sign Up</button>
+        </div>
 
-
-
+      </div>
+    </form>
   </div>
 
   <div class="legal_informations">
     <p (click)="linkToImprint()">Imprint</p>
-    <p (click)="linkToPrivacyPolicy()">Privacy Policy</p>
   </div>
 </section>

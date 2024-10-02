@@ -29,5 +29,10 @@ section {
       text-align: center;
       font-size: clamp(1.3rem, 2vw, 1.5rem);
     }
+
+    :nth-child(3) {
+     width: 150px;
+     height: 60px;
+    }
   }
 }

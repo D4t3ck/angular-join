@@ -49,7 +49,142 @@ h1 {
   }
 }
 
-.legal_informations { 
+.login_form {
+  @include flexbox($fd: column, $g: 2rem);
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  padding: 1rem;
+
+  .input_layout {
+    @include flexbox($jc: none, $fd: column, $g: 1.5rem);
+    max-width: 420px;
+    width: 100%;
+    height: 100%;
+
+    .input_field {
+      position: relative;
+      @include flexbox($jc: space-between, $g: 0.5rem);
+      max-width: clamp(360px, 100%, 420px);
+      width: 100%;
+      height: 3rem;
+      padding: 0 1.5rem;
+      border: 1px solid $clr_font_light;
+      border-radius: $border_radius_input;
+
+      input {
+        border: none;
+        height: 1.5rem;
+        width: 100%;
+        font-size: 1em;
+        background: transparent;
+        color: $clr_sidebar_active;
+
+        &:focus::placeholder {
+          color: transparent;
+        }
+
+        &:not(:focus) ~ label {
+          color: transparent;
+        }
+
+        &:focus ~ label,
+        &:not(:placeholder-shown) ~ label {
+          top: -0.1rem;
+          left: 1rem;
+          font-size: 0.8rem;
+          background: white;
+          padding: 0 0.3rem;
+          color: $clr_light_blue;
+          transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease; // Animation hinzugefügt
+        }
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+
+      label {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        font-size: 1em;
+        color: $clr_font_light;
+        background: transparent;
+        padding: 0 0.5rem;
+        pointer-events: none;
+        transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease; // Animation für das Label
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.password_check {
+  @include flexbox($g: 1rem);
+  width: 100%;
+
+  .password_checkbox {
+    @include flexbox($g: 1rem);
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .checkmark {
+      @include box(1.5rem);
+      cursor: pointer;
+      display: inline-block;
+      transition: opacity 0.3s ease;
+    }
+
+    input[type="checkbox"]:not(:checked) + .checkmark {
+      content: url("../../../../public/img/logIn/unchecked.png");
+    }
+
+    input[type="checkbox"]:checked + .checkmark {
+      content: url("../../../../public/img/logIn/checked.png");
+    }
+
+  }
+  
+  .privacy_policy {
+    color: $clr_light_blue;
+    filter: grayscale(70%);
+   
+    &:hover {
+      cursor: pointer;
+      filter: grayscale(0%);
+      color: $clr_light_blue;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.legal_informations {
   @include flexbox($g: 1rem);
   width: 100%;
 
@@ -77,4 +212,3 @@ h1 {
     }
   }
 }
-
