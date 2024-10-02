@@ -14,6 +14,7 @@ export class LoginComponent {
   linkToImprint() {
     this.router.navigate(['imprint-blank']);
   }
+
   linkToPrivacyPolicy() {
     this.router.navigate(['privacy-policy-blank']);
   }

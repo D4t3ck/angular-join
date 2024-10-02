@@ -19,7 +19,7 @@ section {
 .card {
   @include flexbox($fd: column, $g: 2rem);
   width: clamp(300px, 50%, 550px);
-  max-height: 500px;
+  max-height: 600px;
   height: 100%;
   margin-inline: 1rem;
   padding: 1rem;
@@ -96,7 +96,7 @@ h1 {
           background: white;
           padding: 0 0.3rem;
           color: $clr_light_blue;
-          transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease; // Animation hinzugefügt
+          transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
         }
 
         &:focus-visible {
@@ -114,7 +114,7 @@ h1 {
         background: transparent;
         padding: 0 0.5rem;
         pointer-events: none;
-        transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease; // Animation für das Label
+        transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
       }
 
       .icon {
@@ -150,39 +150,17 @@ h1 {
     input[type="checkbox"]:checked + .checkmark {
       content: url("../../../../public/img/logIn/checked.png");
     }
-
   }
-  
+
   .privacy_policy {
     color: $clr_light_blue;
-    filter: grayscale(70%);
-   
+
     &:hover {
       cursor: pointer;
-      filter: grayscale(0%);
       color: $clr_light_blue;
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .legal_informations {
   @include flexbox($g: 1rem);
