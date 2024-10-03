@@ -13,12 +13,4 @@ export class NavbarComponent {
   menuService = inject(MenuService);
 
   constructor(private router: Router) {}
-
-  linkToImprint() {
-    this.router.navigate(['imprint-blank']);
-  }
-
-  linkToPrivacyPolicy() {
-    this.router.navigate(['privacy-policy-blank']);
-  }
 }
