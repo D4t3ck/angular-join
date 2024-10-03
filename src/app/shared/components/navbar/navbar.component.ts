@@ -7,17 +7,12 @@ import { Router, RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  menuService = inject(MenuService);
 
-menuService = inject(MenuService)
-
-constructor(private router: Router) {}
-
-navigateTo(route: string) {
-  this.router.navigate([route]);
-}
+  constructor(private router: Router) {}
 
   linkToImprint() {
     this.router.navigate(['imprint-blank']);

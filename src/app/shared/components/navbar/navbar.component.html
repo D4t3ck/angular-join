@@ -3,10 +3,15 @@
 
   <div class="sidebar_menu">
     @for (menu of menuService.menu; track $index) {
-      <div class="menus" (click)="navigateTo(menu.routerLink)">
-        <img src="/img/sidebar/{{ menu.icon }}" alt="{{ menu.name }}" />
-        <span>{{ menu.name }}</span>
-      </div>
+    <div
+      class="menus"
+      [routerLink]="menu.routerLink"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <img src="/img/sidebar/{{ menu.icon }}" alt="{{ menu.name }}" />
+      <span>{{ menu.name }}</span>
+    </div>
     }
   </div>
 

@@ -2,8 +2,12 @@
 @import "../../SCSS/mixins.scss";
 @import "../../SCSS/variables.scss";
 
+.active {
+  background-color: $clr_sidebar_hover;
+}
+
 section {
-  @include flexbox($jc: space-between , $fd: column);
+  @include flexbox($jc: space-between, $fd: column);
   position: fixed;
   left: 0;
   max-width: 200px;
@@ -18,10 +22,40 @@ section {
   width: 100%;
 }
 
-.menus { @include randomBorder;
-  @include flexbox($g: 1rem);
-  width: 100%;
-  
+.menus {
+  @include flexbox($jc: flex-start, $g: 1rem);
+  width: 85%;
+  padding: 1 2rem;
+  border-radius: $border_radius_input;
 
+  span {
+    color: $clr_font_light_grey;
+    padding: .5rem;
+
+    /* &:hover {
+      color: $clr_card_border;
+    } */
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $clr_sidebar_hover;
+
+    span {
+      color: $clr_card_border;
+    }
+  }
+}
+
+.legal_informations {
+
+  p {
+    
+    color: $clr_font_light_grey;
   
+    &:hover {
+      cursor: pointer;
+      color: $clr_card_border;
+    }
+  }
 }
