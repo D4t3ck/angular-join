@@ -1,18 +1,23 @@
 import { Component, inject } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+
 menuService = inject(MenuService)
 
 constructor(private router: Router) {}
+
+navigateTo(route: string) {
+  this.router.navigate([route]);
+}
 
   linkToImprint() {
     this.router.navigate(['imprint-blank']);

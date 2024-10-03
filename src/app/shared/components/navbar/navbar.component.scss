@@ -21,8 +21,7 @@ section {
 .menus { @include randomBorder;
   @include flexbox($g: 1rem);
   width: 100%;
+  
 
-  img {
-    
-  }
+  
 }

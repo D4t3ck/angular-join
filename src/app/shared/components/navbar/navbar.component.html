@@ -2,11 +2,11 @@
   <img src="/img/sidebar/join_logo_white.png" alt="Logo" />
 
   <div class="sidebar_menu">
-    @for (menu of menuService.menu; track $index){
-    <div class="menus">
-      <img src="/img/sidebar/{{ menu.icon }}" alt=" {{ menu.name }}" />
-      <p>{{ menu.name }}</p>
-    </div>
+    @for (menu of menuService.menu; track $index) {
+      <div class="menus" (click)="navigateTo(menu.routerLink)">
+        <img src="/img/sidebar/{{ menu.icon }}" alt="{{ menu.name }}" />
+        <span>{{ menu.name }}</span>
+      </div>
     }
   </div>
 
