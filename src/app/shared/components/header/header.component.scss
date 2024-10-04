@@ -12,7 +12,7 @@ section {
 }
 
 span {
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 2vw, 1.75rem);
   font-weight: 400;
 }
 
@@ -30,8 +30,10 @@ span {
     height: 50px;
     color: $clr_light_blue;
     font-weight: bold;
-    font-size: 18px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     border: 2px solid black;
     border-radius: 50%;
   }
 }
+
+@media only screen and (max-width: 680px) {}
