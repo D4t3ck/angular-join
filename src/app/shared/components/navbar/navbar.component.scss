@@ -10,6 +10,7 @@ section {
   @include flexbox($jc: space-between, $fd: column);
   position: fixed;
   left: 0;
+  z-index: 100;
   max-width: 200px;
   width: 100%;
   height: 100dvh;
@@ -25,7 +26,6 @@ section {
 .menus {
   @include flexbox($jc: flex-start, $g: 1rem);
   width: 85%;
-  /* padding: .5rem 2rem; */
   border-radius: $border_radius_input;
 
   span {
@@ -54,7 +54,7 @@ section {
 
   span {
     width: 85%;
-    padding: .5rem 2rem;
+    padding: 0.5rem 2rem;
     border-radius: $border_radius_input;
     color: $clr_font_light_grey;
 
