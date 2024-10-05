@@ -10,7 +10,7 @@
   }
 }
 
-section {
+#navbar {
   @include flexbox($fd: column);
   position: fixed;
   top: 0;
@@ -39,6 +39,7 @@ section {
   height: 3rem;
   padding-left: 3rem;
   color: $clr_font_light_grey;
+  font-size: clamp(12px, 2vw, 16px);
   border-radius: $border_radius_input;
 
   span {
@@ -70,6 +71,58 @@ section {
     &:hover {
       cursor: pointer;
       color: $clr_light_blue;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  #navbar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0;
+  }
+
+  .navbar_logo {
+    display: none;
+  }
+
+  .sidebar_menu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 850px;
+
+    @media (max-width: 850px) {
+      width: 100%;
+      gap: 5px;
+    }
+  }
+
+  .menus {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+  }
+
+  .legal_informations {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .menus {
+    justify-content: center;
+    padding: 0 0.5rem 0 0.5rem;
+
+    span {
+      padding: 0;
+      padding-top: 0.5rem;
     }
   }
 }
