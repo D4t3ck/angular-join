@@ -14,6 +14,10 @@ section {
   box-shadow: $header_box_shadow;
 }
 
+.logo_mobile {
+  display: none;
+}
+
 span {
   font-size: clamp(1rem, 2vw, 1.75rem);
   font-weight: 400;
@@ -39,4 +43,24 @@ span {
   }
 }
 
-@media only screen and (max-width: 680px) {}
+@media only screen and (max-width: 1280px) {
+  section {
+    padding: 0px 40px 0px 40px;
+
+  }
+  .logo_mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  span {
+    display: none;
+  }
+
+  .header_login {
+    img {
+      display: none;
+    }
+  }
+}
