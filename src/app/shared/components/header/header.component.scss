@@ -70,7 +70,7 @@ section {
   @include flexbox($jc: space-evenly, $fd: column);
   display: none;
   position: fixed;
-  right: 0.5rem;
+  right: -200px;
   top: 6.5rem;
   width: 150px;
   height: 160px;
@@ -78,6 +78,13 @@ section {
   color: $clr_font_light_grey;
   background-color: $clr_dark_gray;
   border-radius: 1rem 0 1rem 1rem;
+  transition: right 0.3s ease;
+
+  &.menu-visible {
+    display: flex;
+    right: 0.5rem;
+    animation: slideIn 0.3s ease;
+  }
 
   :last-child {
     &:hover {
@@ -96,5 +103,14 @@ section {
       border-radius: $border_radius_input;
       transition: background-color 0.3s ease;
     }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 0.5rem;
   }
 }
