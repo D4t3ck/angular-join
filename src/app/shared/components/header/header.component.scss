@@ -80,12 +80,6 @@ section {
   border-radius: 1rem 0 1rem 1rem;
   transition: right 0.3s ease;
 
-  &.menu-visible {
-    display: flex;
-    right: 0.5rem;
-    animation: slideIn 0.3s ease;
-  }
-
   :last-child {
     &:hover {
       color: $clr_light_blue;
@@ -103,14 +97,5 @@ section {
       border-radius: $border_radius_input;
       transition: background-color 0.3s ease;
     }
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    right: -200px;
-  }
-  100% {
-    right: 0.5rem;
   }
 }
