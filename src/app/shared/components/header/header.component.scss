@@ -12,21 +12,22 @@ section {
   padding: 0px 40px 0px 348px;
   background-color: $clr_card;
   box-shadow: $header_box_shadow;
+
+  
+  span {
+    font-size: clamp(1rem, 2vw, 1.75rem);
+    font-weight: 400;
+  }
 }
 
 .logo_mobile {
   display: none;
 }
 
-span {
-  font-size: clamp(1rem, 2vw, 1.75rem);
-  font-weight: 400;
-}
-
 .header_login {
   @include flexbox($g: 1rem);
 
-  >img {
+  > img {
     @include curserPointer;
   }
 
@@ -46,7 +47,6 @@ span {
 @media only screen and (max-width: 1280px) {
   section {
     padding: 0px 40px 0px 40px;
-
   }
   .logo_mobile {
     display: block;
@@ -54,8 +54,10 @@ span {
 }
 
 @media only screen and (max-width: 680px) {
-  span {
-    display: none;
+  #header {
+    > span {
+      display: none;
+    }
   }
 
   .header_login {
@@ -63,4 +65,17 @@ span {
       display: none;
     }
   }
+}
+
+.navbar_menu {
+  @include flexbox($jc: space-evenly, $fd: column);
+  position: absolute;
+  right: 0.5rem;
+  top: 6.5rem;
+  width: 150px;
+  height: 160px;
+  padding: 1rem;
+  color: $clr_font_light_grey;
+  background-color: $clr_sidebar_active;
+  border-radius: 1rem 0 1rem 1rem;
 }
