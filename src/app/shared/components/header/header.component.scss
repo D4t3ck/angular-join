@@ -43,7 +43,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1440px) {
   section {
     padding: 0px 40px 0px 40px;
   }
@@ -96,6 +96,14 @@ section {
       background-color: $clr_sidebar_hover;
       border-radius: $border_radius_input;
       transition: background-color 0.3s ease;
+    }
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .navbar_menu {
+    :nth-child(3) {
+      display: none;
     }
   }
 }
