@@ -12,6 +12,7 @@ import { HeaderComponent } from '../../shared/components/header/header.component
 })
 export class PrivacyPolicyComponent {
   constructor(private _location: Location) {}
+
   navigateBack() {
     this._location.back();
   }
