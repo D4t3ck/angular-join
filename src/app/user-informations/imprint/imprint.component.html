@@ -7,9 +7,10 @@
       <div class="header-container">
         <h1>Legal Notice</h1>
 
-        <a routerLinkActive="router-link-active" href="index.html"
-          ><img src="/img/arrow_back.png" alt="Back"
-        /></a>
+        <div (click)="navigateBack()">
+          <img src="/img/arrow_back.png" alt="Back" />
+        </div>
+
       </div>
       <h3>Imprint</h3>
 
