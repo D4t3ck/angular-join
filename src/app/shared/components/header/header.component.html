@@ -1,18 +1,20 @@
 <section id="header">
-    <img class="logo_mobile" src="/img/header/header_mobile_logo.png" alt="Logo" />
-    <span>Kanban Project Management Tool</span>
-  
-    <div class="header_login" (click)="toggleNavbarMenu()">
-      <img routerLink="/user-help" src="/img/header/help.png" alt="Help" />
-      <span>G</span>
-    </div>
-  </section>
-  
-  <div class="navbar_menu" [@slideInOut]="navbarVisible ? 'visible' : 'hidden'">
-      <span routerLink="/user-help">Help</span>
-    <span routerLink="/imprint">Imprint</span>
-    <span routerLink="/privacy-policy">Privacy Policy</span>
-    <span routerLink="">Log Out</span>
+  <img
+    class="logo_mobile"
+    src="/img/header/header_mobile_logo.png"
+    alt="Logo"
+  />
+  <span>Kanban Project Management Tool</span>
+
+  <div class="header_login" (click)="toggleNavbarMenu()">
+    <img routerLink="/user-help" src="/img/header/help.png" alt="Help" />
+    <span>G</span>
   </div>
-  
-  
+</section>
+
+<div class="navbar_menu" [@slideInOut]="navbarVisible ? 'visible' : 'hidden'">
+  <span routerLink="/user-help">Help</span>
+  <span routerLink="/imprint">Imprint</span>
+  <span routerLink="/privacy-policy">Privacy Policy</span>
+  <span routerLink="">Log Out</span>
+</div>
