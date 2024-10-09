@@ -13,6 +13,10 @@ section {
   background-color: $clr_card;
   box-shadow: $header_box_shadow;
 
+  img {
+    @include curserPointer;
+  }
+
   span {
     font-size: clamp(1rem, 2vw, 1.75rem);
     font-weight: 400;
@@ -21,26 +25,6 @@ section {
 
 .logo_mobile {
   display: none;
-}
-
-.header_login {
-  @include flexbox($g: 1rem);
-
-  > img {
-    @include curserPointer;
-  }
-
-  span {
-    @include flexbox;
-    @include curserPointer;
-    width: 50px;
-    height: 50px;
-    color: $clr_light_blue;
-    font-weight: bold;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    border: 2px solid black;
-    border-radius: 50%;
-  }
 }
 
 @media only screen and (max-width: 1440px) {

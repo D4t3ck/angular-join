@@ -15,6 +15,7 @@
 }
 
 .navbar_logo {
+  @include curserPointer;
   width: 100px;
   margin-bottom: 114px;
 }
@@ -57,19 +58,6 @@
 
     span {
       padding: 0;
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .menus {
-    justify-content: center;
-    padding: 0 0.5rem 0 0.5rem;
-    margin: 0;
-
-    span {
-      padding: 0;
-      padding-top: 0.5rem;
     }
   }
 }
