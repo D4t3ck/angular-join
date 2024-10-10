@@ -19,6 +19,10 @@ $linear_gradient_hvr_light_grey: linear_gradient(
   rgba(249, 249, 249, 1) 100%
 );
 
+.cur_p {
+  @include curserPointer;
+}
+
 .button_full {
   width: 110px;
   height: 48px;
