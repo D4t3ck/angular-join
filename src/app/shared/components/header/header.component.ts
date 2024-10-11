@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import {
   trigger,
   state,
@@ -38,7 +38,13 @@ import {
 export class HeaderComponent {
   navbarVisible = false;
 
+  constructor(private router: Router) {}
+
   toggleNavbarMenu() {
     this.navbarVisible = !this.navbarVisible;
+  }
+
+  logout() {
+    this.router.navigate(['/login']);
   }
 }

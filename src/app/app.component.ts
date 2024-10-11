@@ -27,13 +27,6 @@ export class AppComponent {
       }
     });
   }
-  /* ngOnInit(): void {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: any) => {
-      this.checkPath(event.urlAfterRedirects);
-    });
-  } */
 
   checkPath(url: string) {
     this.onLogin = url === '/login' || url === '/signup';
