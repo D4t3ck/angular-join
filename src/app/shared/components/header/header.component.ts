@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import {
   trigger,
@@ -8,6 +8,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -36,9 +37,12 @@ import {
   ],
 })
 export class HeaderComponent {
+  router = inject(Router);
+  authService = inject(AuthService);
+
   navbarVisible = false;
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   toggleNavbarMenu() {
     this.navbarVisible = !this.navbarVisible;

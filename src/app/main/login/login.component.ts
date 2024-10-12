@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,18 +10,27 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
+  router = inject(Router);
+  authService = inject(AuthService);
   
-  constructor(private router: Router) {}
+  constructor() {}
 
   linkToImprint() {
+    this.authService.setLoggedIn(false);  // Setzt den Status auf nicht eingeloggt
     this.router.navigate(['imprint-blank']);
   }
 
   linkToPrivacyPolicy() {
+    this.authService.setLoggedIn(false);
     this.router.navigate(['privacy-policy-blank']);
   }
 
   linkToSignUp() {
     this.router.navigate(['signup']);
+  }
+
+  logInUser() {
+    this.authService.setLoggedIn(true); // Beispiel: Nutzer ist eingeloggt
+    this.router.navigate(['summary']);
   }
 }

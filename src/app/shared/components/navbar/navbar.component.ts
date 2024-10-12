@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +12,8 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
   menuService = inject(MenuService);
+  router = inject(Router);
+  authService = inject(AuthService);
 
-  constructor(private router: Router) {}
+  constructor() {}
 }

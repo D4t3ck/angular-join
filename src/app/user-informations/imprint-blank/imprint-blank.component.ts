@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Location } from '@angular/common';
 import { HeaderBlankComponent } from "../../shared/components/header-blank/header-blank.component";
 import { NavbarBlankComponent } from "../../shared/components/navbar-blank/navbar-blank.component";
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-imprint-blank',
@@ -11,9 +12,12 @@ import { NavbarBlankComponent } from "../../shared/components/navbar-blank/navba
   styleUrl: './imprint-blank.component.scss',
 })
 export class ImprintBlankComponent {
+  authService = inject(AuthService);
+  
   constructor(private _location: Location) {}
 
   navigateBack() {
+    this.authService.setLoggedIn(false);
     this._location.back();
   }
 }
