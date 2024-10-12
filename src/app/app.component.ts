@@ -29,6 +29,6 @@ export class AppComponent {
   }
 
   checkPath(url: string) {
-    this.onLogin = url === '/login' || url === '/signup';
+    this.onLogin = url === '/login' || url === '/' || url === '/signup';
   }
 }
