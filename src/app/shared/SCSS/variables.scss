@@ -23,6 +23,12 @@ $linear_gradient_hvr_light_grey: linear_gradient(
   @include curserPointer;
 }
 
+.card_wrapper {
+  background-color: $clr_card;
+  border-radius: $border_radius_card;
+  box-shadow: $box_shadow;
+}
+
 .button_full {
   width: 110px;
   height: 48px;
