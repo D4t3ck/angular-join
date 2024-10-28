@@ -30,11 +30,11 @@ $linear_gradient_hvr_light_grey: linear_gradient(
 }
 
 .button_full {
-  width: 110px;
-  height: 48px;
+  width: 6.5rem;
+  height: 3rem;
   text-decoration: none;
   border: unset;
-  font-size: 21px;
+  font-size: 1.25rem;
   font-weight: 700;
   background-color: $clr_dark_gray;
   color: $clr_bg;
@@ -49,11 +49,11 @@ $linear_gradient_hvr_light_grey: linear_gradient(
 }
 
 .button_empty {
-  width: 177px;
-  height: 48px;
+  width: 10rem;
+  height: 3rem;
   text-decoration: none;
   border: unset;
-  font-size: 21px;
+  font-size: 1.25rem;
   font-weight: 700;
   border: 1px solid $clr_sidebar_active;
   background-color: $clr_card;

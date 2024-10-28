@@ -190,6 +190,10 @@ h1 {
 
   .buttons_wrapper {
     flex-direction: column;
+
+    .button_full {
+      width: 160px;
+    }
   }
 
   .sign_up_mobile {

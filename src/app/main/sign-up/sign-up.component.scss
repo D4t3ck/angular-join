@@ -41,17 +41,15 @@ section {
     text-align: center;
     font-size: 3em;
     font-weight: 700;
-  
+
     .seperator {
       height: 0px;
       width: 180px;
       border-bottom: 3px solid $clr_light_blue;
-      margin-top: .3rem;
+      margin-top: 0.3rem;
     }
   }
-
 }
-
 
 .signup_form {
   @include flexbox($fd: column, $g: 2rem);
