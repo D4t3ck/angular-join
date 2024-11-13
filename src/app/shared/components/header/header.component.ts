@@ -22,14 +22,12 @@ import { AuthService } from '../../services/auth.service';
         'hidden',
         style({
           right: '-200px',
-          display: 'none',
         })
       ),
       state(
         'visible',
         style({
           right: '0.5rem',
-          display: 'flex',
         })
       ),
       transition('hidden <=> visible', [animate('300ms ease-in')]),

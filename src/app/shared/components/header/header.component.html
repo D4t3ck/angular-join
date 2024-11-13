@@ -12,7 +12,11 @@
   </div>
 </section>
 
-<div class="navbar_menu" [@slideInOut]="navbarVisible ? 'visible' : 'hidden'">
+<div
+  class="navbar_menu"
+  [ngClass]="navbarVisible ? 'visible' : 'hidden'"
+  [@slideInOut]="navbarVisible ? 'visible' : 'hidden'"
+>
   <span routerLink="/user-help">Help</span>
   <span routerLink="/imprint">Imprint</span>
   <span routerLink="/privacy-policy">Privacy Policy</span>

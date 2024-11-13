@@ -16,7 +16,7 @@ export class LoginComponent {
   constructor() {}
 
   linkToImprint() {
-    this.authService.setLoggedIn(false);  // Setzt den Status auf nicht eingeloggt
+    this.authService.setLoggedIn(false); 
     this.router.navigate(['imprint-blank']);
   }
 
@@ -30,7 +30,7 @@ export class LoginComponent {
   }
 
   logInUser() {
-    this.authService.setLoggedIn(true); // Beispiel: Nutzer ist eingeloggt
+    this.authService.setLoggedIn(true);
     this.router.navigate(['summary']);
   }
 }
