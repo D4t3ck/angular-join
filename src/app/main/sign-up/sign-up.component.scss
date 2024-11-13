@@ -142,11 +142,11 @@ section {
     }
 
     input[type="checkbox"]:not(:checked) + .checkmark {
-      content: url("../../../../public/img/logIn/unchecked.png");
+      content: url("../../../../public/img/log_in/unchecked.png");
     }
 
     input[type="checkbox"]:checked + .checkmark {
-      content: url("../../../../public/img/logIn/checked.png");
+      content: url("../../../../public/img/log_in/checked.png");
     }
   }
 
