@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Location } from '@angular/common';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { HeaderComponent } from '../../shared/components/header/header.component';
+import { UiService } from '../../shared/services/ui.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -11,9 +12,8 @@ import { HeaderComponent } from '../../shared/components/header/header.component
   styleUrl: './privacy-policy.component.scss',
 })
 export class PrivacyPolicyComponent {
-  constructor(private _location: Location) {}
+  uiService = inject(UiService);
 
-  navigateBack() {
-    this._location.back();
-  }
+  constructor() {}
+
 }

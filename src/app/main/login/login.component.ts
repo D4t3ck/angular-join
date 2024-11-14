@@ -17,12 +17,12 @@ export class LoginComponent {
 
   linkToImprint() {
     this.authService.setLoggedIn(false); 
-    this.router.navigate(['imprint-blank']);
+    this.router.navigate(['imprint']);
   }
 
   linkToPrivacyPolicy() {
     this.authService.setLoggedIn(false);
-    this.router.navigate(['privacy-policy-blank']);
+    this.router.navigate(['privacy-policy']);
   }
 
   linkToSignUp() {
