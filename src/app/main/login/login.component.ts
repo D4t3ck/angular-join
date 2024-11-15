@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../shared/services/auth.service';
+import { UiService } from '../../shared/services/ui.service';
 
 @Component({
   selector: 'app-login',
@@ -12,25 +13,23 @@ import { AuthService } from '../../shared/services/auth.service';
 export class LoginComponent {
   router = inject(Router);
   authService = inject(AuthService);
+  uiService = inject(UiService)
   
   constructor() {}
 
   linkToImprint() {
-    this.authService.setLoggedIn(false); 
-    this.router.navigate(['imprint']);
+    this.uiService.navigate('imprint', false);
   }
 
   linkToPrivacyPolicy() {
-    this.authService.setLoggedIn(false);
-    this.router.navigate(['privacy-policy']);
+    this.uiService.navigate('privacy-policy', false);
   }
 
   linkToSignUp() {
-    this.router.navigate(['signup']);
+    this.uiService.navigate('signup');
   }
 
   logInUser() {
-    this.authService.setLoggedIn(true);
-    this.router.navigate(['summary']);
+    this.uiService.navigate('summary', true);
   }
 }

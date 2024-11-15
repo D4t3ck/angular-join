@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Location } from '@angular/common';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { HeaderComponent } from '../../shared/components/header/header.component';
+import { UiService } from '../../shared/services/ui.service';
 
 @Component({
   selector: 'app-user-help',
@@ -11,9 +12,8 @@ import { HeaderComponent } from '../../shared/components/header/header.component
   styleUrl: './user-help.component.scss',
 })
 export class UserHelpComponent {
-  constructor(private _location: Location) {}
+  uiService = inject(UiService);
+  
+  constructor() {}
 
-  navigateBack() {
-    this._location.back();
-  }
 }
