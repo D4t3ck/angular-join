@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { Location } from '@angular/common';
+import { AuthService } from '../../shared/services/auth.service';
+import { UiService } from '../../shared/services/ui.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -10,16 +11,17 @@ import { Location } from '@angular/common';
   styleUrl: './sign-up.component.scss',
 })
 export class SignUpComponent {
-  constructor(private router: Router, private _location: Location) {}
+  router = inject(Router);
+  authService = inject(AuthService);
+  uiService = inject(UiService);
 
-  backToLogin() {
-    this._location.back();
-  }
+  constructor() {}
 
   linkToImprint() {
-    this.router.navigate(['imprint-blank']);
+    this.uiService.navigate('imprint', false);
   }
+
   linkToPrivacyPolicy() {
-    this.router.navigate(['privacy-policy-blank']);
+    this.uiService.navigate('privacy-policy', false);
   }
 }

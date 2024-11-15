@@ -5,7 +5,11 @@
 
   <div class="card card_wrapper">
     <div class="card_head">
-      <img (click)="backToLogin()" src="/img/signUp/arrow_left.png" alt="" />
+      <img
+        (click)="uiService.goBack()"
+        src="/img/signUp/arrow_left.png"
+        alt=""
+      />
       <h1>
         Sign up
         <div class="seperator"></div>
@@ -15,7 +19,6 @@
     <form class="signup_form" action="">
       <div class="input_layout">
         <div class="input_field">
-
           <input placeholder="Name" formControlName="email" required />
           <label>Name</label>
           <div class="icon">
@@ -66,7 +69,6 @@
           </div>
         </div>
 
-
         <div class="password_check">
           <label class="password_checkbox">
             <input type="checkbox" />
@@ -76,13 +78,17 @@
               class="checkmark"
             />
           </label>
-          <p>I accept the <span class="privacy_policy" routerLink="/privacy-policy-blank">Privacy Policy</span></p>
+          <p>
+            I accept the
+            <span class="privacy_policy" (click)="linkToPrivacyPolicy()"
+              >Privacy Policy</span
+            >
+          </p>
         </div>
 
         <div class="buttons_wrapper">
           <button class="button_full">Sign Up</button>
         </div>
-
       </div>
     </form>
   </div>
