@@ -131,11 +131,17 @@ h1 {
     @include flexbox($g: 1rem);
 
     input[type="checkbox"] {
-      display: none;
+      border: 0 !important;
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px !important;
+      overflow: hidden;
+      padding: 0 !important;
+      position: absolute !important;
+      width: 1px !important;
     }
 
     .checkmark {
-      @include box(1.5rem);
+      @include box(1.6rem);
       cursor: pointer;
       display: inline-block;
       transition: opacity 0.3s ease;

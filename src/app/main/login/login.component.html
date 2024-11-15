@@ -46,7 +46,12 @@
 
         <div class="password_check">
           <label class="password_checkbox">
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              required
+              aria-label="Remember my password"
+              required
+            />
             <img
               src="img/log_in/unchecked.png"
               alt="Checkbox aktiv"
@@ -58,7 +63,9 @@
 
         <div class="buttons_wrapper">
           <button class="button_full">Log in</button>
-          <button class="button_empty" (click)="logInUser()">Guest Log in</button>
+          <button class="button_empty" (click)="logInUser()">
+            Guest Log in
+          </button>
         </div>
       </div>
     </form>
