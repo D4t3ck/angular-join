@@ -1,6 +1,7 @@
 <section id="header">
   <img
     class="logo_mobile"
+    (click)="uiService.goBack()"
     src="/img/header/header_mobile_logo.png"
     alt="Logo"
   />
@@ -18,7 +19,7 @@
   [@slideInOut]="navbarVisible ? 'visible' : 'hidden'"
 >
   <span routerLink="/user-help">Help</span>
-  <span routerLink="/imprint">Imprint</span>
-  <span routerLink="/privacy-policy">Privacy Policy</span>
+  <span (click)="linkToImprint()">Imprint</span>
+  <span (click)="linkToPrivacyPolicy()">Privacy Policy</span>
   <span (click)="logout()">Log Out</span>
 </div>

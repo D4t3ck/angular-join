@@ -35,4 +35,7 @@ export class UiService {
       this.location.back();
     }
   }
+
+  // TODO: evtl. routen wenn logged in oder wenn nicht ändern.
+  // zB auf summary wenn true, oder nur back wenn andere fälle
 }

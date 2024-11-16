@@ -9,6 +9,7 @@ import {
   transition,
 } from '@angular/animations';
 import { AuthService } from '../../services/auth.service';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-header',
@@ -37,6 +38,7 @@ import { AuthService } from '../../services/auth.service';
 export class HeaderComponent {
   router = inject(Router);
   authService = inject(AuthService);
+  uiService = inject(UiService);
 
   navbarVisible = false;
 
@@ -44,6 +46,16 @@ export class HeaderComponent {
 
   toggleNavbarMenu() {
     this.navbarVisible = !this.navbarVisible;
+  }
+
+  linkToImprint() {
+    this.uiService.navigate('imprint', false);
+    this.navbarVisible = false;
+  }
+
+  linkToPrivacyPolicy() {
+    this.uiService.navigate('privacy-policy', false);
+    this.navbarVisible = false;
   }
 
   logout() {
