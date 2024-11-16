@@ -19,6 +19,8 @@ $linear_gradient_hvr_light_grey: linear_gradient(
   rgba(249, 249, 249, 1) 100%
 );
 
+$content_limit: 1920px;
+
 .cur_p {
   @include curserPointer;
 }

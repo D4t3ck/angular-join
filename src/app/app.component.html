@@ -4,7 +4,7 @@
 </header>
 }
 
-<main>
+<main [ngClass]="onLogin ? 'on-login' : 'main'">
   <router-outlet></router-outlet>
 </main>
 

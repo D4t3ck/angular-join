@@ -25,7 +25,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0.5rem;
 }
 
 /* Track */
@@ -35,11 +35,10 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: $clr_sidebar_active;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: $clr_light_blue;
 }
-
