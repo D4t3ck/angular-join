@@ -48,13 +48,18 @@ export class HeaderComponent {
     this.navbarVisible = !this.navbarVisible;
   }
 
+  linkToHelp() {
+    this.uiService.navigate('user-help', true);
+    this.navbarVisible = false;
+  }
+
   linkToImprint() {
-    this.uiService.navigate('imprint', false);
+    this.uiService.navigate('imprint', true);
     this.navbarVisible = false;
   }
 
   linkToPrivacyPolicy() {
-    this.uiService.navigate('privacy-policy', false);
+    this.uiService.navigate('privacy-policy', true);
     this.navbarVisible = false;
   }
 

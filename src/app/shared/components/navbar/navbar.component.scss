@@ -10,7 +10,7 @@
   }
 }
 
-#navbar {
+.navbar {
   @include flexbox($fd: column);
   position: fixed;
   top: 0;
@@ -77,7 +77,7 @@
 }
 
 @media only screen and (max-width: 1440px) {
-  #navbar {
+  .navbar {
     position: fixed;
     top: auto;
     bottom: 0;
@@ -113,7 +113,12 @@
   }
 
   .legal_informations {
-    display: none;
+    flex-direction: row;
+
+    span {
+      width: 40%;
+      padding: 0.5rem 0;
+    }
   }
 }
 

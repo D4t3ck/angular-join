@@ -1,7 +1,12 @@
-<section id="navbar">
-  <img class="navbar_logo" (click)="uiService.goHome()" src="/img/sidebar/join_logo_white.png" alt="Logo" />
+<section id="navbar" class="navbar">
+  <img
+    class="navbar_logo"
+    (click)="uiService.goHome()"
+    src="/img/sidebar/join_logo_white.png"
+    alt="Logo"
+  />
 
-@if (uiService.userLoggedIn) {
+  @if (uiService.userLoggedIn) {
 
   <div class="sidebar_menu">
     @for (menu of menuService.menu; track $index) {
@@ -16,11 +21,13 @@
     </div>
     }
   </div>
-}
+  }
 
   <div class="legal_informations">
     <span routerLink="/imprint" routerLinkActive="active">Imprint</span>
-    <span routerLink="/privacy-policy" routerLinkActive="active">Privacy Policy</span>
+    <span routerLink="/privacy-policy" routerLinkActive="active"
+      >Privacy Policy</span
+    >
   </div>
 </section>
 

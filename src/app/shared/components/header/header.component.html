@@ -1,7 +1,7 @@
 <section id="header">
   <img
     class="logo_mobile"
-    (click)="uiService.goBack()"
+    (click)="uiService.goHome()"
     src="/img/header/header_mobile_logo.png"
     alt="Logo"
   />
@@ -20,7 +20,7 @@
   [ngClass]="navbarVisible ? 'visible' : 'hidden'"
   [@slideInOut]="navbarVisible ? 'visible' : 'hidden'"
 >
-  <span routerLink="/user-help">Help</span>
+  <span (click)="linkToHelp()">Help</span>
   <span (click)="linkToImprint()">Imprint</span>
   <span (click)="linkToPrivacyPolicy()">Privacy Policy</span>
   <span (click)="logout()">Log Out</span>
