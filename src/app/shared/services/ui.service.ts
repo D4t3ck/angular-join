@@ -10,6 +10,7 @@ export class UiService {
   private location = inject(Location);
 
   userLoggedIn: boolean = false;
+  
 
   constructor() {}
 

@@ -7,10 +7,12 @@
   />
   <span>Kanban Project Management Tool</span>
 
+  @if (uiService.userLoggedIn) {
   <div class="header_login">
     <img routerLink="/user-help" src="/img/header/help.png" alt="Help" />
     <span (click)="toggleNavbarMenu()">G</span>
   </div>
+  }
 </section>
 
 <div
