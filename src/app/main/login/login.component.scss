@@ -88,13 +88,9 @@ h1 {
 
         &:focus ~ label,
         &:not(:placeholder-shown) ~ label {
-          top: -0.1rem;
-          left: 1rem;
-          font-size: 0.8rem;
-          background: white;
-          padding: 0 0.3rem;
+          transform: translateY(-2rem) scale(0.8);
           color: $clr_light_blue;
-          transition: top 0.4s ease, font-size 0.4s ease, color 0.4s ease;
+          background: white;
         }
 
         &:focus-visible {
@@ -107,12 +103,13 @@ h1 {
         top: 50%;
         left: 1rem;
         transform: translateY(-50%);
+        transform-origin: left center;
         font-size: 1em;
         color: $clr_font_light;
         background: transparent;
         padding: 0 0.5rem;
         pointer-events: none;
-        transition: top 0.4s ease, font-size 0.4s ease, color 0.4s ease;
+        transition: transform 0.4s ease, color 0.4s ease;
       }
 
       .icon {
