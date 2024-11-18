@@ -23,7 +23,10 @@
   </div>
   }
 
-  <div class="legal_informations">
+  <div
+  class="legal_informations"
+  [ngClass]="uiService.userLoggedIn ? 'd_none' : ''"
+  >
     <span routerLink="/imprint" routerLinkActive="active">Imprint</span>
     <span routerLink="/privacy-policy" routerLinkActive="active"
       >Privacy Policy</span
