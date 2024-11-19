@@ -27,9 +27,9 @@ export class UiService {
 
   goHome() {
     if (this.userLoggedIn) {
-      this.router.navigate(['summary']);
+      this.navigate('summary');
     } else {
-      this.router.navigate(['']);
+      this.navigate('');
     }
   }
 
