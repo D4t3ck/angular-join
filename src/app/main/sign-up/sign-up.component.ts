@@ -17,11 +17,5 @@ export class SignUpComponent {
 
   constructor() {}
 
-  linkToImprint() {
-    this.uiService.navigate('imprint', false);
-  }
-
-  linkToPrivacyPolicy() {
-    this.uiService.navigate('privacy-policy', false);
-  }
+  
 }

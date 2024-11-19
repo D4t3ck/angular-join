@@ -4,7 +4,7 @@
 
     <div class="sign_up_desktop">
       <p>Not a Join user?</p>
-      <button class="button_full" (click)="linkToSignUp()">Sign up</button>
+      <button class="button_full" (click)="uiService.navigate('signup')">Sign up</button>
     </div>
   </div>
 
@@ -73,11 +73,11 @@
 
   <div class="sign_up_mobile">
     <p>Not a Join user?</p>
-    <button class="button_full" (click)="linkToSignUp()">Sign up</button>
+    <button class="button_full" (click)="uiService.navigate('signup')">Sign up</button>
   </div>
 
   <div class="legal_informations">
-    <p (click)="linkToImprint()">Imprint</p>
-    <p (click)="linkToPrivacyPolicy()">Privacy Policy</p>
+    <p (click)="uiService.navigate('imprint', false)">Imprint</p>
+    <p (click)="uiService.navigate('privacy-policy', false)">Privacy Policy</p>
   </div>
 </section>

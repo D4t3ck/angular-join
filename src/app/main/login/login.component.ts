@@ -13,21 +13,9 @@ import { UiService } from '../../shared/services/ui.service';
 export class LoginComponent {
   router = inject(Router);
   authService = inject(AuthService);
-  uiService = inject(UiService)
-  
+  uiService = inject(UiService);
+
   constructor() {}
-
-  linkToImprint() {
-    this.uiService.navigate('imprint', false);
-  }
-
-  linkToPrivacyPolicy() {
-    this.uiService.navigate('privacy-policy', false);
-  }
-
-  linkToSignUp() {
-    this.uiService.navigate('signup');
-  }
 
   logInUser() {
     this.uiService.navigate('summary', true);

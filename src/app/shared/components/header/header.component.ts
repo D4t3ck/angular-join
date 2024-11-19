@@ -42,18 +42,8 @@ export class HeaderComponent {
 
   constructor() {}
 
-  linkToHelp() {
-    this.uiService.navigate('user-help', true);
-    this.uiService.toggleNavbarMenu();
-  }
-
-  linkToImprint() {
-    this.uiService.navigate('imprint', true);
-    this.uiService.toggleNavbarMenu();
-  }
-
-  linkToPrivacyPolicy() {
-    this.uiService.navigate('privacy-policy', true);
+  goToRouteAndClose(route: string, status: boolean) {
+    this.uiService.navigate(route, status)
     this.uiService.toggleNavbarMenu();
   }
 

@@ -9,7 +9,7 @@
 
   @if (uiService.userLoggedIn) {
   <div class="header_login">
-    <img routerLink="/user-help" src="/img/header/help.png" alt="Help" />
+    <img (click)="uiService.navigate('user-help')" src="/img/header/help.png" alt="Help" />
     <span (click)="uiService.toggleNavbarMenu()">G</span>
   </div>
   }
@@ -20,8 +20,8 @@
   [ngClass]="uiService.navbarVisible ? 'visible' : 'hidden'"
   [@slideInOut]="uiService.navbarVisible ? 'visible' : 'hidden'"
 >
-  <span (click)="linkToHelp()">Help</span>
-  <span (click)="linkToImprint()">Imprint</span>
-  <span (click)="linkToPrivacyPolicy()">Privacy Policy</span>
+  <span (click)="goToRouteAndClose('user-help', true)">Help</span>
+  <span (click)="goToRouteAndClose('imprint', true)">Imprint</span>
+  <span (click)="goToRouteAndClose('privacy-policy', true)">Privacy Policy</span>
   <span (click)="logout()">Log Out</span>
 </div>

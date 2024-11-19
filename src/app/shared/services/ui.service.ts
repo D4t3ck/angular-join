@@ -11,7 +11,6 @@ export class UiService {
 
   userLoggedIn: boolean = false;
   navbarVisible: boolean = false;
-  
 
   constructor() {}
 

@@ -85,7 +85,9 @@
           </label>
           <p>
             I accept the
-            <span class="privacy_policy" (click)="linkToPrivacyPolicy()"
+            <span
+              class="privacy_policy"
+              (click)="uiService.navigate('privacy-policy', false)"
               >Privacy Policy</span
             >
           </p>
@@ -99,6 +101,6 @@
   </div>
 
   <div class="legal_informations">
-    <p (click)="linkToImprint()">Imprint</p>
+    <p (click)="uiService.navigate('imprint', false)">Imprint</p>
   </div>
 </section>
