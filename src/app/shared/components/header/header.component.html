@@ -10,15 +10,15 @@
   @if (uiService.userLoggedIn) {
   <div class="header_login">
     <img routerLink="/user-help" src="/img/header/help.png" alt="Help" />
-    <span (click)="toggleNavbarMenu()">G</span>
+    <span (click)="uiService.toggleNavbarMenu()">G</span>
   </div>
   }
 </section>
 
 <div
   class="navbar_menu"
-  [ngClass]="navbarVisible ? 'visible' : 'hidden'"
-  [@slideInOut]="navbarVisible ? 'visible' : 'hidden'"
+  [ngClass]="uiService.navbarVisible ? 'visible' : 'hidden'"
+  [@slideInOut]="uiService.navbarVisible ? 'visible' : 'hidden'"
 >
   <span (click)="linkToHelp()">Help</span>
   <span (click)="linkToImprint()">Imprint</span>

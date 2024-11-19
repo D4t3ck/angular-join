@@ -10,6 +10,7 @@ export class UiService {
   private location = inject(Location);
 
   userLoggedIn: boolean = false;
+  navbarVisible: boolean = false;
   
 
   constructor() {}
@@ -19,6 +20,10 @@ export class UiService {
       this.userLoggedIn = loggedInStatus;
     }
     this.router.navigate([route], extras);
+  }
+
+  toggleNavbarMenu() {
+    this.navbarVisible = !this.navbarVisible;
   }
 
   goHome() {

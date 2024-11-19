@@ -24,8 +24,8 @@
   }
 
   <div
-  class="legal_informations"
-  [ngClass]="uiService.userLoggedIn ? 'd_none' : ''"
+    class="legal_informations"
+    [ngClass]="uiService.userLoggedIn ? 'd_none' : ''"
   >
     <span routerLink="/imprint" routerLinkActive="active">Imprint</span>
     <span routerLink="/privacy-policy" routerLinkActive="active"
@@ -33,7 +33,3 @@
     >
   </div>
 </section>
-
-<!--
-  TODO: Hide Navbar if not logged in, because it´s empty and ugly to look at.
--->

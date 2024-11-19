@@ -40,27 +40,21 @@ export class HeaderComponent {
   authService = inject(AuthService);
   uiService = inject(UiService);
 
-  navbarVisible = false;
-
   constructor() {}
-
-  toggleNavbarMenu() {
-    this.navbarVisible = !this.navbarVisible;
-  }
 
   linkToHelp() {
     this.uiService.navigate('user-help', true);
-    this.navbarVisible = false;
+    this.uiService.toggleNavbarMenu();
   }
 
   linkToImprint() {
     this.uiService.navigate('imprint', true);
-    this.navbarVisible = false;
+    this.uiService.toggleNavbarMenu();
   }
 
   linkToPrivacyPolicy() {
     this.uiService.navigate('privacy-policy', true);
-    this.navbarVisible = false;
+    this.uiService.toggleNavbarMenu();
   }
 
   logout() {
