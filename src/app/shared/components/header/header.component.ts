@@ -42,11 +42,6 @@ export class HeaderComponent {
 
   constructor() {}
 
-  goToRouteAndClose(route: string, status: boolean) {
-    this.uiService.navigate(route, status);
-    this.uiService.toggleNavbarMenu();
-  }
-
   logout() {
     this.router.navigate(['/login']);
     this.uiService.toggleNavbarMenu();

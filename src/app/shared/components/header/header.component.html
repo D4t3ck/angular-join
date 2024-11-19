@@ -20,8 +20,8 @@
   [ngClass]="uiService.navbarVisible ? 'visible' : 'hidden'"
   [@slideInOut]="uiService.navbarVisible ? 'visible' : 'hidden'"
 >
-  <span (click)="goToRouteAndClose('user-help', true)">Help</span>
-  <span (click)="goToRouteAndClose('imprint', true)">Imprint</span>
-  <span (click)="goToRouteAndClose('privacy-policy', true)">Privacy Policy</span>
+  <span (click)="uiService.goToRouteAndClose('user-help', true)">Help</span>
+  <span (click)="uiService.goToRouteAndClose('imprint', true)">Imprint</span>
+  <span (click)="uiService.goToRouteAndClose('privacy-policy', true)">Privacy Policy</span>
   <span (click)="logout()">Log Out</span>
 </div>

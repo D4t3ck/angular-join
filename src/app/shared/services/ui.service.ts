@@ -21,6 +21,11 @@ export class UiService {
     this.router.navigate([route], extras);
   }
 
+  goToRouteAndClose(route: string, status: boolean) {
+    this.navigate(route, status);
+    this.navbarVisible = false;
+  }
+
   toggleNavbarMenu() {
     this.navbarVisible = !this.navbarVisible;
   }
