@@ -28,8 +28,14 @@
     class="legal_informations"
     [ngClass]="uiService.userLoggedIn ? 'd_none' : ''"
   >
-    <span routerLink="/imprint" routerLinkActive="active">Imprint</span>
-    <span routerLink="/privacy-policy" routerLinkActive="active"
+    <span
+      (click)="uiService.goToRouteAndClose('imprint', true)"
+      routerLinkActive="active"
+      >Imprint</span
+    >
+    <span
+      (click)="uiService.goToRouteAndClose('privacy-policy', true)"
+      routerLinkActive="active"
       >Privacy Policy</span
     >
   </div>

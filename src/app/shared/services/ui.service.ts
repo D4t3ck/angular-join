@@ -33,8 +33,10 @@ export class UiService {
   goHome() {
     if (this.userLoggedIn) {
       this.navigate('summary');
+      this.navbarVisible = false;
     } else {
       this.navigate('');
+      this.navbarVisible = false;
     }
   }
 
