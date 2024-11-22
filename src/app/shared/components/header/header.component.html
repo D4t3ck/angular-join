@@ -9,7 +9,11 @@
 
   @if (uiService.userLoggedIn) {
   <div class="header_login">
-    <img (click)="uiService.navigate('user-help')" src="/img/header/help.png" alt="Help" />
+    <img
+      (click)="uiService.goToRouteAndClose('user-help', true)"
+      src="/img/header/help.png"
+      alt="Help"
+    />
     <span (click)="uiService.toggleNavbarMenu()">G</span>
   </div>
   }
@@ -22,6 +26,8 @@
 >
   <span (click)="uiService.goToRouteAndClose('user-help', true)">Help</span>
   <span (click)="uiService.goToRouteAndClose('imprint', true)">Imprint</span>
-  <span (click)="uiService.goToRouteAndClose('privacy-policy', true)">Privacy Policy</span>
+  <span (click)="uiService.goToRouteAndClose('privacy-policy', true)"
+    >Privacy Policy</span
+  >
   <span (click)="logout()">Log Out</span>
 </div>
