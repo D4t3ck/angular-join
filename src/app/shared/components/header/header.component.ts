@@ -10,6 +10,7 @@ import {
 } from '@angular/animations';
 import { AuthService } from '../../services/auth.service';
 import { UiService } from '../../services/ui.service';
+import { slideInOut } from '../../animations';
 
 @Component({
   selector: 'app-header',
@@ -17,23 +18,7 @@ import { UiService } from '../../services/ui.service';
   imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  animations: [
-    trigger('slideInOut', [
-      state(
-        'hidden',
-        style({
-          right: '-200px',
-        })
-      ),
-      state(
-        'visible',
-        style({
-          right: '0.5rem',
-        })
-      ),
-      transition('hidden <=> visible', [animate('300ms ease-in')]),
-    ]),
-  ],
+  animations: [slideInOut ],
 })
 export class HeaderComponent {
   router = inject(Router);
