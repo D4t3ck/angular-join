@@ -11,6 +11,7 @@ import {
 import { AuthService } from '../../services/auth.service';
 import { UiService } from '../../services/ui.service';
 import { slideInOut } from '../../animations';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'app-header',
@@ -24,6 +25,7 @@ export class HeaderComponent {
   router = inject(Router);
   authService = inject(AuthService);
   uiService = inject(UiService);
+  menuService = inject(MenuService)
 
   constructor() {}
 
