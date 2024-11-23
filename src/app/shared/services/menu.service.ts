@@ -31,24 +31,21 @@ export class MenuService {
     },
   ];
 
-  userInf: UserInf[] = [
-    {
-      routerLink: '/imprint',
-      name: 'Imprint',
-      icon: ''
-    },
+  imprint: UserInf = {
+    routerLink: '/imprint',
+    name: 'Imprint',
+    icon: '',
+  };
 
-    {
-      routerLink: '/privacy-policy',
-      name: 'Privacy Policy',
-      icon: ''
-    },
+  privacyPolicy: UserInf = {
+    routerLink: '/privacy-policy',
+    name: 'Privacy Policy',
+    icon: '',
+  };
 
-    {
-      routerLink: '/user-help',
-      name: 'Help',
-      icon: ''
-    },
-
-  ] 
+  userHelp: UserInf = {
+    routerLink: '/user-help',
+    name: 'Help',
+    icon: 'help.png',
+  };
 }

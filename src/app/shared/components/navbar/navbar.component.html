@@ -24,6 +24,7 @@
   </div>
   }
 
+  
   <div
     class="legal_informations"
     [ngClass]="uiService.userLoggedIn ? 'd_none' : ''"
@@ -31,12 +32,12 @@
     <span
       (click)="uiService.goToRouteAndClose('imprint')"
       routerLinkActive="active"
-      >Imprint</span
+      >{{ menuService.imprint.name }}</span
     >
     <span
       (click)="uiService.goToRouteAndClose('privacy-policy')"
       routerLinkActive="active"
-      >Privacy Policy</span
+      >{{ menuService.privacyPolicy.name }}</span
     >
   </div>
 </section>
