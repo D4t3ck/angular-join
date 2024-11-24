@@ -10,7 +10,7 @@ export class UiService {
   private location = inject(Location);
 
   userLoggedIn: boolean = false;
-  navbarVisible: boolean = false;
+  showHeaderMenu: boolean = false;
 
   constructor() {}
 
@@ -23,20 +23,20 @@ export class UiService {
 
   goToRouteAndClose(route: string, status?: boolean) {
     this.navigate(route, status);
-    this.navbarVisible = false;
+    this.showHeaderMenu = false;
   }
 
-  toggleNavbarMenu() {
-    this.navbarVisible = !this.navbarVisible;
+  toggleHeaderMenu() {
+    this.showHeaderMenu = !this.showHeaderMenu;
   }
 
   goHome() {
     if (this.userLoggedIn) {
       this.navigate('summary');
-      this.navbarVisible = false;
+      this.showHeaderMenu = false;
     } else {
       this.navigate('');
-      this.navbarVisible = false;
+      this.showHeaderMenu = false;
     }
   }
 
@@ -47,7 +47,4 @@ export class UiService {
       this.location.back();
     }
   }
-
-  // TODO: evtl. routen wenn logged in oder wenn nicht ändern.
-  // zB auf summary wenn true, oder nur back wenn andere fälle
 }

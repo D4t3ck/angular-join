@@ -67,7 +67,17 @@ section {
   }
 }
 
-.navbar_menu {
+.header_bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: transparent;
+}
+
+.header_menu {
   @include flexbox($jc: space-evenly, $fd: column);
   display: none;
   position: fixed;
@@ -94,7 +104,6 @@ section {
     text-align: center;
 
     &:hover:not(:nth-child(4)) {
-      
       color: $clr_card_border;
       background-color: $clr_sidebar_hover;
       transition: background-color 0.3s ease;
@@ -102,17 +111,16 @@ section {
   }
 }
 
-.navbar_menu.hidden {
+.header_menu.hidden {
   display: none;
 }
 
-.navbar_menu.visible {
+.header_menu.visible {
   display: flex;
 }
 
-
 @media only screen and (min-width: 680px) {
-  .navbar_menu {
+  .header_menu {
     :nth-child(1) {
       display: none;
     }

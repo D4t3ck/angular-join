@@ -14,24 +14,28 @@
       src="/img/header/help.png"
       alt="Help"
     />
-    <span (click)="uiService.toggleNavbarMenu()">G</span>
+    <span (click)="uiService.toggleHeaderMenu()">G</span>
   </div>
   }
 </section>
 
-<div
-  class="navbar_menu"
-  [ngClass]="uiService.navbarVisible ? 'visible' : 'hidden'"
-  [@slideInOut]="uiService.navbarVisible ? 'visible' : 'hidden'"
->
-  <span (click)="uiService.goToRouteAndClose('user-help', true)">{{
-    menuService.userHelp.name
-  }}</span>
-  <span (click)="uiService.goToRouteAndClose('imprint', true)">{{
-    menuService.imprint.name
-  }}</span>
-  <span (click)="uiService.goToRouteAndClose('privacy-policy', true)">{{
-    menuService.privacyPolicy.name
-  }}</span>
-  <span (click)="logout()">Log Out</span>
+@if(uiService.showHeaderMenu){
+<div class="header_bg" (click)="uiService.toggleHeaderMenu()">
+  <div
+    class="header_menu"
+    [ngClass]="uiService.showHeaderMenu ? 'visible' : 'hidden'"
+    [@slideInOut]="uiService.showHeaderMenu ? 'visible' : 'hidden'"
+  >
+    <span (click)="uiService.goToRouteAndClose('user-help', true)">{{
+      menuService.userHelp.name
+    }}</span>
+    <span (click)="uiService.goToRouteAndClose('imprint', true)">{{
+      menuService.imprint.name
+    }}</span>
+    <span (click)="uiService.goToRouteAndClose('privacy-policy', true)">{{
+      menuService.privacyPolicy.name
+    }}</span>
+    <span (click)="logout()">Log Out</span>
+  </div>
 </div>
+}
