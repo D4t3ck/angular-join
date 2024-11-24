@@ -97,7 +97,7 @@ section {
     }
   }
 
-  span {
+  a {
     @include curserPointer;
     width: 100%;
     padding: 0.5rem;

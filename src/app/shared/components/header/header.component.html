@@ -26,16 +26,16 @@
     [ngClass]="uiService.showHeaderMenu ? 'visible' : 'hidden'"
     [@slideInOut]="uiService.showHeaderMenu ? 'visible' : 'hidden'"
   >
-    <span (click)="uiService.goToRouteAndClose('user-help', true)">{{
+    <a (click)="uiService.goToRouteAndClose('user-help', true)">{{
       menuService.userHelp.name
-    }}</span>
-    <span (click)="uiService.goToRouteAndClose('imprint', true)">{{
+    }}</a>
+    <a (click)="uiService.goToRouteAndClose('imprint', true)">{{
       menuService.imprint.name
-    }}</span>
-    <span (click)="uiService.goToRouteAndClose('privacy-policy', true)">{{
+    }}</a>
+    <a (click)="uiService.goToRouteAndClose('privacy-policy', true)">{{
       menuService.privacyPolicy.name
-    }}</span>
-    <span (click)="logout()">Log Out</span>
+    }}</a>
+    <a (click)="logout()">Log Out</a>
   </div>
 </div>
 }
