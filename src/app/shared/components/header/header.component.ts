@@ -1,17 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
 import { AuthService } from '../../services/auth.service';
 import { UiService } from '../../services/ui.service';
-import { slideInOut } from '../../animations';
 import { MenuService } from '../../services/menu.service';
+import { slideInOut } from '../../animations';
 
 @Component({
   selector: 'app-header',
@@ -30,7 +23,7 @@ export class HeaderComponent {
   constructor() {}
 
   logout() {
-    this.router.navigate(['/login']);
     this.uiService.toggleHeaderMenu();
+    this.router.navigate(['/login']);
   }
 }

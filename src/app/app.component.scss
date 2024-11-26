@@ -2,3 +2,72 @@
 @import "./shared/SCSS/mixins.scss";
 @import "./shared/SCSS/variables.scss";
 
+.on-login {
+  height: 100dvh;
+  display: flex;
+  width: 100vw;
+}
+
+/* .flex-container {
+    max-width: $content_limit;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+  } */
+
+.grid-container {
+  margin-inline: auto;
+  max-width: $content_limit;
+  display: grid;
+  grid-template-columns: 232px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "navbar header" "navbar main";
+}
+
+.navbar {
+  height: 100dvh;
+  grid-column: 1;
+  grid-area: navbar;
+}
+
+.header {
+  height: 100px;
+  grid-row: 1;
+  grid-column: 2;
+  grid-area: header;
+}
+
+.main {
+  grid-row: 2;
+  grid-column: 2;
+  grid-area: main;
+  overflow-y: auto;
+  height: calc(100dvh - 100px);
+  background-color: $clr_bg;
+}
+
+@media (max-width: 1440px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "navbar";
+    height: 100dvh;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .main {
+    height: 100%;
+  }
+
+  .header,
+  .main,
+  .navbar {
+    width: 100%;
+  }
+}

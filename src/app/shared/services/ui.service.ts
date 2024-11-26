@@ -10,7 +10,7 @@ export class UiService {
   private location = inject(Location);
 
   userLoggedIn: boolean = false;
-  showHeaderMenu: boolean = false;
+  navbarVisible: boolean = false;
 
   constructor() {}
 
@@ -23,20 +23,20 @@ export class UiService {
 
   goToRouteAndClose(route: string, status?: boolean) {
     this.navigate(route, status);
-    this.showHeaderMenu = false;
+    this.navbarVisible = false;
   }
 
   toggleHeaderMenu() {
-    this.showHeaderMenu = !this.showHeaderMenu;
+    this.navbarVisible = !this.navbarVisible;
   }
 
   goHome() {
     if (this.userLoggedIn) {
       this.navigate('summary');
-      this.showHeaderMenu = false;
+      this.navbarVisible = false;
     } else {
       this.navigate('');
-      this.showHeaderMenu = false;
+      this.navbarVisible = false;
     }
   }
 

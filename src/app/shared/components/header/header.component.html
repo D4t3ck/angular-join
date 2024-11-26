@@ -14,28 +14,31 @@
       src="/img/header/help.png"
       alt="Help"
     />
-    <span (click)="uiService.toggleHeaderMenu()">G</span>
+    <button (click)="uiService.toggleHeaderMenu()">G</button>
+
+    @if(uiService.navbarVisible){
+    <div class="header_bg" (click)="uiService.toggleHeaderMenu()">
+      <!-- <div class="btn_wrapper"> -->
+        <div
+          class="header_menu"
+          [ngClass]="uiService.navbarVisible ? 'visible' : 'hidden'"
+          [@slideInOut]="uiService.navbarVisible ? 'visible' : 'hidden'"
+          
+        >
+          <a (click)="uiService.goToRouteAndClose('user-help', true)">{{
+            menuService.userHelp.name
+          }}</a>
+          <a (click)="uiService.goToRouteAndClose('imprint', true)">{{
+            menuService.imprint.name
+          }}</a>
+          <a (click)="uiService.goToRouteAndClose('privacy-policy', true)">{{
+            menuService.privacyPolicy.name
+          }}</a>
+          <a (click)="logout()">Log Out</a>
+        </div>
+      <!-- </div> -->
+    </div>
+    }
   </div>
   }
 </section>
-
-@if(uiService.showHeaderMenu){
-<div class="header_bg" (click)="uiService.toggleHeaderMenu()">
-  <div
-    class="header_menu"
-    [ngClass]="uiService.showHeaderMenu ? 'visible' : 'hidden'"
-    [@slideInOut]="uiService.showHeaderMenu ? 'visible' : 'hidden'"
-  >
-    <a (click)="uiService.goToRouteAndClose('user-help', true)">{{
-      menuService.userHelp.name
-    }}</a>
-    <a (click)="uiService.goToRouteAndClose('imprint', true)">{{
-      menuService.imprint.name
-    }}</a>
-    <a (click)="uiService.goToRouteAndClose('privacy-policy', true)">{{
-      menuService.privacyPolicy.name
-    }}</a>
-    <a (click)="logout()">Log Out</a>
-  </div>
-</div>
-}

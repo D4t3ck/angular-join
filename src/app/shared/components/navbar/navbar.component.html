@@ -28,15 +28,15 @@
     class="legal_informations"
     [ngClass]="uiService.userLoggedIn ? 'd_none' : ''"
   >
-    <span
+    <a
       (click)="uiService.goToRouteAndClose('imprint')"
       routerLinkActive="active"
-      >{{ menuService.imprint.name }}</span
+      >{{ menuService.imprint.name }}</a
     >
-    <span
+    <a
       (click)="uiService.goToRouteAndClose('privacy-policy')"
       routerLinkActive="active"
-      >{{ menuService.privacyPolicy.name }}</span
+      >{{ menuService.privacyPolicy.name }}</a
     >
   </div>
 </section>
