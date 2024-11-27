@@ -28,6 +28,11 @@ export class UiService {
 
   toggleHeaderMenu() {
     this.navbarVisible = !this.navbarVisible;
+    if(this.navbarVisible) {
+      console.log(true);
+      
+    }
+    
   }
 
   goHome() {

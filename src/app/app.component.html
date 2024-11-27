@@ -1,21 +1,15 @@
-<div>
+@if (!onLogin) {
+<header class="header">
+  <app-header></app-header>
+</header>
+}
 
-  @if (!onLogin) {
-    <header class="header">
-      <app-header></app-header>
-    </header>
-    }
-    
-    <main class="main">
-      <router-outlet></router-outlet>
-    </main>
-    
-    @if (!onLogin) {
-    <nav class="navbar">
-      <app-navbar></app-navbar>
-    </nav>
-    }
-    
+<main class="main">
+  <router-outlet></router-outlet>
+</main>
 
-</div>
-
+@if (!onLogin) {
+<nav class="navbar">
+  <app-navbar></app-navbar>
+</nav>
+}

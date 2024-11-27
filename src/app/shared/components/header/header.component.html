@@ -16,14 +16,16 @@
     />
     <button (click)="uiService.toggleHeaderMenu()">G</button>
 
-    @if(uiService.navbarVisible){
-    <div class="header_bg" (click)="uiService.toggleHeaderMenu()">
-      <!-- <div class="btn_wrapper"> -->
+    <div
+      class="header_bg"
+      [ngClass]="uiService.navbarVisible ? 'visible' : 'hidden'"
+      (click)="uiService.toggleHeaderMenu()"
+    >
+      <div class="btn_wrapper">
         <div
           class="header_menu"
           [ngClass]="uiService.navbarVisible ? 'visible' : 'hidden'"
           [@slideInOut]="uiService.navbarVisible ? 'visible' : 'hidden'"
-          
         >
           <a (click)="uiService.goToRouteAndClose('user-help', true)">{{
             menuService.userHelp.name
@@ -36,9 +38,8 @@
           }}</a>
           <a (click)="logout()">Log Out</a>
         </div>
-      <!-- </div> -->
+      </div>
     </div>
-    }
   </div>
   }
 </section>

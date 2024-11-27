@@ -6,7 +6,7 @@ section {
   @include flexbox($jc: space-between);
   width: 100%;
   height: 6rem;
-  padding: 0 40px;
+  padding: 0 40px 0 440px;
   background-color: $clr_card;
   box-shadow: $header_box_shadow;
 
@@ -66,7 +66,8 @@ section {
 }
 
 .header_bg {
-  position: absolute;
+  display: none;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
@@ -113,11 +114,11 @@ section {
   }
 }
 
-.header_menu.hidden {
+.hidden {
   display: none;
 }
 
-.header_menu.visible {
+.visible {
   display: flex;
 }
 
