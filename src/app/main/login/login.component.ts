@@ -19,6 +19,5 @@ export class LoginComponent {
 
   logInUser() {
     this.uiService.navigate('summary', true);
-    this.uiService.toggleHeaderMenu();
   } // TODO: Funktion implementieren und mit auth verknüpfen
 }
