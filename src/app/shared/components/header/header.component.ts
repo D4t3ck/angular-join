@@ -12,13 +12,13 @@ import { slideInOut } from '../../animations';
   imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  animations: [slideInOut ],
+  animations: [slideInOut],
 })
 export class HeaderComponent {
   router = inject(Router);
   authService = inject(AuthService);
   uiService = inject(UiService);
-  menuService = inject(MenuService)
+  menuService = inject(MenuService);
 
   constructor() {}
 

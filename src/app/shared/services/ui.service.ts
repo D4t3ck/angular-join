@@ -30,6 +30,10 @@ export class UiService {
     this.navbarVisible = !this.navbarVisible;
   }
 
+  closeHeaderMenu() {
+    this.navbarVisible = false;
+  }
+
   goHome() {
     if (this.userLoggedIn) {
       this.navigate('summary');
