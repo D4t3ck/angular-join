@@ -7,7 +7,7 @@
   height: 100%;
   background-color: $clr-bg;
   display: grid;
-  grid-template-rows: 96px 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-columns: 232px 1fr;
   grid-template-areas:
     "header header "
@@ -15,7 +15,7 @@
 
   @media (max-width: 1440px) {
     grid-template-columns: 12px 1fr 12px;
-    grid-template-rows: 96px 1fr 80px;
+    grid-template-rows: auto;
     height: auto;
     grid-template-areas:
       "leftspace header rightspace "

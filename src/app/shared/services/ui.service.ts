@@ -33,7 +33,7 @@ export class UiService {
   closeHeaderMenu() {
     setTimeout(() => {
       this.navbarVisible = false;
-    }, 300);
+    }, 100);
   }
 
   goHome() {
