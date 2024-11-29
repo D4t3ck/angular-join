@@ -18,28 +18,26 @@
 
     <div
       class="header_bg"
-      [ngClass]="uiService.navbarVisible ? 'visible' : 'hidden'"
+      [ngClass]="uiService.navbarVisible ? 'visible' : ''"
       (click)="uiService.closeHeaderMenu()"
-    >
-      <div class="btn_wrapper">
-        <div
-          class="header_menu"
-          [ngClass]="uiService.navbarVisible ? 'visible' : 'hidden'"
-          [@slideInOut]="uiService.navbarVisible ? 'visible' : 'hidden'"
-        >
-          <a (click)="uiService.goToRouteAndClose('user-help', true)">{{
-            menuService.userHelp.name
-          }}</a>
-          <a (click)="uiService.goToRouteAndClose('imprint', true)">{{
-            menuService.imprint.name
-          }}</a>
-          <a (click)="uiService.goToRouteAndClose('privacy-policy', true)">{{
-            menuService.privacyPolicy.name
-          }}</a>
-          <a (click)="logout()">Log Out</a>
-        </div>
-      </div>
-    </div>
+    ></div>
   </div>
   <!-- } -->
 </section>
+
+<div
+  class="header_menu"
+  [ngClass]="uiService.navbarVisible ? 'visible' : ''"
+  [@slideInOut]="uiService.navbarVisible ? 'visible' : ''"
+>
+  <a (click)="uiService.goToRouteAndClose('user-help', true)">{{
+    menuService.userHelp.name
+  }}</a>
+  <a (click)="uiService.goToRouteAndClose('imprint', true)">{{
+    menuService.imprint.name
+  }}</a>
+  <a (click)="uiService.goToRouteAndClose('privacy-policy', true)">{{
+    menuService.privacyPolicy.name
+  }}</a>
+  <a (click)="logout()">Log Out</a>
+</div>

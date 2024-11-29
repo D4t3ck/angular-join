@@ -5,6 +5,7 @@
 section {
   @include flexbox($jc: space-evenly, $fd: column);
   height: 100dvh;
+  margin-left: 0;
 }
 
 .head_wrapper {

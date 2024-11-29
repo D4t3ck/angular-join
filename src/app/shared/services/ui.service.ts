@@ -31,7 +31,9 @@ export class UiService {
   }
 
   closeHeaderMenu() {
-    this.navbarVisible = false;
+    setTimeout(() => {
+      this.navbarVisible = false;
+    }, 300);
   }
 
   goHome() {
