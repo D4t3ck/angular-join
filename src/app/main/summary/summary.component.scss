@@ -3,35 +3,46 @@
 @import "../../shared/SCSS/variables.scss";
 
 section {
-  height: 100dvh;
+  display: flex;
+  height: calc(100dvh - 6rem);
   margin-left: 15rem;
   padding-left: 180px;
 
-  .head {
-    display: flex;
-    align-items: center;
-    height: 70px;
-    margin: 1rem 1rem;
+  .content {
+    @include randomBorder;
 
-    h1 {
-      font-size: 3.75rem;
-      margin: 0;
-    }
+    .head {
+      display: flex;
+      align-items: center;
+      height: 70px;
+      margin: 1rem 1rem;
 
-    > div {
-      @include flexbox($jc: none, $fd: row-reverse);
-
-      span {
-        font-size: 27px;
+      h1 {
+        font-size: 3.75rem;
+        margin: 0;
       }
 
-      .seperator {
-        height: 0px;
-        width: 3.75rem;
-        rotate: 90deg;
-        border-bottom: 3px solid $clr_light_blue;
+      > div {
+        @include flexbox($jc: none, $fd: row-reverse);
+
+        span {
+          font-size: 27px;
+        }
+
+        .seperator {
+          height: 0px;
+          width: 3.75rem;
+          rotate: 90deg;
+          border-bottom: 3px solid $clr_light_blue;
+        }
       }
     }
+  }
+
+  .greeting_wrapper {
+    @include randomBorder;
+    @include flexbox;
+    flex: 1;
   }
 }
 
