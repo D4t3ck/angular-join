@@ -76,7 +76,7 @@
   }
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: $media_size_tablet) {
   .navbar {
     position: fixed;
     top: auto;
@@ -128,7 +128,7 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: $media_size_phone_xs) {
   .menus {
     justify-content: center;
     padding: 0 0.5rem 0 0.5rem;

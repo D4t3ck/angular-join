@@ -180,7 +180,7 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: $media_size_tablet_xs) {
   .head_wrapper {
     .logo_img {
       @include box(70px, 80px);
