@@ -41,7 +41,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: $media_size_tablet) {
   section {
     padding: 0px 40px 0px 40px;
   }
@@ -51,7 +51,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: $media_size_phone) {
   #header {
     > span {
       display: none;
@@ -116,7 +116,7 @@ section {
   display: flex;
 }
 
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: $media_size_phone) {
   .header_menu {
     :nth-child(1) {
       display: none;

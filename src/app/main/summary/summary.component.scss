@@ -3,14 +3,37 @@
 @import "../../shared/SCSS/variables.scss";
 
 section {
-    height: 100dvh;
-    margin-left: 15rem;
-    padding-left: 200px;
+  @include randomBorder;
+  height: 100dvh;
+  margin-left: 15rem;
+  padding-left: 200px;
+
+  .head {
+    @include randomBorder;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    margin: 2rem 0 0 0;
+
+    h1 {
+      font-size: 3.75rem;
+      margin: 0;
+    }
+
+    > div {
+      @include flexbox($jc: none, $fd: row-reverse);
+    }
+
+    span {
+      font-size: 27px;
+    }
+
+    .seperator {
+      height: 0px;
+      width: 3.75rem;
+      rotate: 90deg;
+      border-bottom: 3px solid $clr_light_blue;
+    }
+  }
 }
 
-@media only screen and (max-width: 1440px) {
-    section {
-        margin-left: 0;
-        padding-left: 2rem;
-    }
-}
