@@ -102,7 +102,47 @@ section {
 
     .done {
       grid-area: done;
+      @include flexbox();
       @include box(16.5rem, 10.5rem);
+
+      .done_first {
+        padding-left: 2rem;
+
+        > img {
+          @include box(4.4rem);
+        }
+      }
+
+      .seperator_dashed {
+        @include flexbox;
+        flex: 1;
+        height: 1px;
+        width: 5rem;
+        rotate: 90deg;
+        color: $clr_light_blue;
+        /* border-bottom: 3px dashed $clr_light_blue; */
+      }
+
+      .done_second {
+        @include flexbox($fd: column);
+        padding-right: 2rem;
+
+        div:first-of-type {
+          @include box(31px, 77px);
+          font-size: 64px;
+          font-weight: 600;
+          line-height: 76.8px;
+          text-align: center;
+        }
+
+        div:nth-of-type(2) {
+          @include box(63px, 24px);
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: center;
+        }
+      }
     }
 
     .priority {
