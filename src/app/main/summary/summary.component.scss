@@ -37,6 +37,43 @@ section {
         }
       }
     }
+
+    .container {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 1rem 1rem;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "toDo toDo toDo done done done"
+        "priority priority priority priority priority priority"
+        "taskInBoard taskInBoard taskInProgress taskInProgress feedback feedback";
+    }
+
+    .toDo {
+      grid-area: toDo;
+    }
+
+    .done {
+      grid-area: done;
+    }
+
+    .priority {
+      grid-area: priority;
+    }
+
+    .taskInBoard {
+      grid-area: taskInBoard;
+    }
+
+    .taskInProgress {
+      grid-area: taskInProgress;
+    }
+
+    .feedback {
+      grid-area: feedback;
+    }
   }
 
   .greeting_wrapper {
@@ -45,6 +82,8 @@ section {
     flex: 1;
   }
 }
+
+/* Media Querys */
 
 @media only screen and (max-width: $media_size_tabletxl) {
   section {
@@ -72,12 +111,13 @@ section {
 }
 
 @media only screen and (max-width: $media_size_tablet_xm) {
-    section {
+  section {
+    justify-content: center;
 
-        .greeting_wrapper {
-            display: none;
-        }
+    .greeting_wrapper {
+      display: none;
     }
+  }
 }
 
 @media only screen and (max-width: $media_size_phone_xm) {
