@@ -46,7 +46,7 @@ section {
   }
 }
 
-@media only screen and (max-width: $media_size_tablet) {
+@media only screen and (max-width: $media_size_tabletxl) {
   section {
     margin-left: 0;
     padding: 1rem 0 0 2rem;
@@ -69,6 +69,15 @@ section {
       }
     }
   }
+}
+
+@media only screen and (max-width: $media_size_tablet_xm) {
+    section {
+
+        .greeting_wrapper {
+            display: none;
+        }
+    }
 }
 
 @media only screen and (max-width: $media_size_phone_xm) {
