@@ -10,7 +10,7 @@ section {
 
   .content {
     @include randomBorder;
-
+    
     .head {
       display: flex;
       align-items: center;
@@ -42,15 +42,6 @@ section {
       @include flexbox;
     }
 
-    .seperator_dashed {
-      @include flexbox;
-      flex: 1;
-      height: 1px;
-      width: 5rem;
-      rotate: 90deg;
-      color: $clr_light_blue;
-    }
-
     .container {
       margin-top: 2rem;
       display: grid;
@@ -66,8 +57,9 @@ section {
 
     .toDo {
       grid-area: toDo;
-      @include flexbox();
+      @include flexbox($g: 1rem);
       @include box(16.5rem, 10.5rem);
+      @include curserPointer;
 
       .toDo_first {
         padding-left: 2rem;
@@ -101,8 +93,9 @@ section {
 
     .done {
       grid-area: done;
-      @include flexbox();
+      @include flexbox($g: 1rem);
       @include box(16.5rem, 10.5rem);
+      @include curserPointer;
 
       .done_first {
         padding-left: 2rem;
@@ -138,9 +131,10 @@ section {
       grid-area: priority;
       @include flexbox();
       @include box(35rem, 10.5rem);
+      @include curserPointer;
 
       .prio_first {
-        @include flexbox;
+        @include flexbox($g: 1rem);
         padding: 2rem;
 
         > img {
@@ -183,6 +177,8 @@ section {
     .taskInBoard {
       grid-area: taskInBoard;
       @include flexbox($fd: column);
+      @include curserPointer;
+
       div:first-of-type {
         font-size: 64px;
         font-weight: 600;
@@ -199,6 +195,8 @@ section {
     .taskInProgress {
       grid-area: taskInProgress;
       @include flexbox($fd: column);
+      @include curserPointer;
+
       div:first-of-type {
         font-size: 64px;
         font-weight: 600;
@@ -215,6 +213,8 @@ section {
     .feedback {
       grid-area: feedback;
       @include flexbox($fd: column);
+      @include curserPointer;
+
       div:first-of-type {
         font-size: 64px;
         font-weight: 600;
@@ -230,7 +230,6 @@ section {
   }
 
   .greeting_wrapper {
-    @include randomBorder;
     @include flexbox;
     flex: 1;
   }
