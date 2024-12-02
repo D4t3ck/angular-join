@@ -150,7 +150,6 @@ section {
 
       .prio_second {
         @include flexbox($fd: column);
-       
 
         div:first-of-type {
           @include box(31px, 77px);
@@ -179,20 +178,54 @@ section {
           line-height: 25.2px;
         }
       }
-
-
     }
 
     .taskInBoard {
       grid-area: taskInBoard;
+      @include flexbox($fd: column);
+      div:first-of-type {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 76.8px;
+      }
+      div:nth-of-type(2) {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+      }
     }
 
     .taskInProgress {
       grid-area: taskInProgress;
+      @include flexbox($fd: column);
+      div:first-of-type {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 76.8px;
+      }
+      div:nth-of-type(2) {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+      }
     }
 
     .feedback {
       grid-area: feedback;
+      @include flexbox($fd: column);
+      div:first-of-type {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 76.8px;
+      }
+      div:nth-of-type(2) {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+      }
     }
   }
 
