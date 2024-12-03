@@ -10,7 +10,7 @@ section {
 
   .content {
     @include randomBorder;
-    
+
     .head {
       display: flex;
       align-items: center;
@@ -75,18 +75,12 @@ section {
 
         div:first-of-type {
           @include box(31px, 77px);
-          font-size: 64px;
-          font-weight: 600;
-          line-height: 76.8px;
-          text-align: center;
+          @include typo(64px, 600, 76.8px, center);
         }
 
         div:nth-of-type(2) {
           @include box(63px, 24px);
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 24px;
-          text-align: center;
+          @include typo(20px, 400, 24px, center);
         }
       }
     }
@@ -111,18 +105,12 @@ section {
 
         div:first-of-type {
           @include box(31px, 77px);
-          font-size: 64px;
-          font-weight: 600;
-          line-height: 76.8px;
-          text-align: center;
+          @include typo(64px, 600, 76.8px, center);
         }
 
         div:nth-of-type(2) {
           @include box(63px, 24px);
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 24px;
-          text-align: center;
+          @include typo(20px, 400, 24px, center);
         }
       }
     }
@@ -147,18 +135,12 @@ section {
 
         div:first-of-type {
           @include box(31px, 77px);
-          font-size: 64px;
-          font-weight: 600;
-          line-height: 76.8px;
-          text-align: center;
+          @include typo(64px, 600, 7676.8px, center);
         }
 
         div:nth-of-type(2) {
           @include box(63px, 24px);
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 24px;
-          text-align: center;
+          @include typo(20px, 400, 24px, center);
         }
       }
 
@@ -167,9 +149,7 @@ section {
         padding: 2rem;
 
         .date {
-          font-size: 21px;
-          font-weight: 700;
-          line-height: 25.2px;
+          @include typo(21px, 700, 25.2px);
         }
       }
     }
@@ -180,15 +160,10 @@ section {
       @include curserPointer;
 
       div:first-of-type {
-        font-size: 64px;
-        font-weight: 600;
-        line-height: 76.8px;
+        @include typo(64px, 600, 76.8px);
       }
       div:nth-of-type(2) {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: center;
+        @include typo(20px, 400, 24px, center);
       }
     }
 
@@ -198,15 +173,10 @@ section {
       @include curserPointer;
 
       div:first-of-type {
-        font-size: 64px;
-        font-weight: 600;
-        line-height: 76.8px;
+        @include typo(64px, 600, 76.8px);
       }
       div:nth-of-type(2) {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: center;
+        @include typo(20px, 400, 24px, center);
       }
     }
 
@@ -216,15 +186,10 @@ section {
       @include curserPointer;
 
       div:first-of-type {
-        font-size: 64px;
-        font-weight: 600;
-        line-height: 76.8px;
+        @include typo(64px, 600, 76.8px);
       }
       div:nth-of-type(2) {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: center;
+        @include typo(20px, 400, 24px, center);
       }
     }
   }

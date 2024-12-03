@@ -36,22 +36,17 @@
   cursor: pointer;
 }
 
-@mixin typography(
-  $font-size: null,
-  $font-weight: null,
-  $line-height: null,
-  $text-align: null
-) {
-  @if $font-size {
-    font-size: $font-size;
+@mixin typo($fz: null, $fw: null, $lh: null, $ta: null) {
+  @if $fz {
+    font-size: $fz;
   }
-  @if $font-weight {
-    font-weight: $font-weight;
+  @if $fw {
+    font-weight: $fw;
   }
-  @if $line-height {
-    line-height: $line-height;
+  @if $lh {
+    line-height: $lh;
   }
-  @if $text-align {
-    text-align: $text-align;
+  @if $ta {
+    text-align: $ta;
   }
 }
