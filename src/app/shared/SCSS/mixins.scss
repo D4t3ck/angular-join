@@ -1,37 +1,57 @@
 @mixin flexbox($fd: row, $jc: center, $ai: center, $g: 0px) {
-    display: flex;
-    flex-direction: $fd;
-    justify-content: $jc;
-    align-items: $ai;
-    gap: $g;
-  }
-  
-  @mixin box($width, $height: $width) {
-    width: $width;
-    height: $height;
-  }
-  
-  @mixin bgCover($s: cover, $p: center) {
-    background-repeat: no-repeat;
-    background-size: $s;
-    background-position: $p;
-  }
-  
-  @mixin randomBorder($width: 1px) {
-    $red: random(255);
-    $green: random(255);
-    $blue: random(255);
-    border: $width dashed rgb($red, $green, $blue);
-  }
-  
-  @mixin curserPointer {
-    &:hover {
-      cursor: pointer;
-    }
-  }
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
 
-  @mixin link($c: white) {
-    color: $c;
-    text-decoration: none;
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin bgCover($s: cover, $p: center) {
+  background-repeat: no-repeat;
+  background-size: $s;
+  background-position: $p;
+}
+
+@mixin randomBorder($width: 1px) {
+  $red: random(255);
+  $green: random(255);
+  $blue: random(255);
+  border: $width dashed rgb($red, $green, $blue);
+}
+
+@mixin curserPointer {
+  &:hover {
     cursor: pointer;
   }
+}
+
+@mixin link($c: white) {
+  color: $c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin typography(
+  $font-size: null,
+  $font-weight: null,
+  $line-height: null,
+  $text-align: null
+) {
+  @if $font-size {
+    font-size: $font-size;
+  }
+  @if $font-weight {
+    font-weight: $font-weight;
+  }
+  @if $line-height {
+    line-height: $line-height;
+  }
+  @if $text-align {
+    text-align: $text-align;
+  }
+}
