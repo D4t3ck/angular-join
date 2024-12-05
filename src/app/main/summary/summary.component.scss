@@ -57,140 +57,35 @@ section {
 
     .toDo {
       grid-area: toDo;
-      @include flexbox($g: 1rem);
-      @include box(16.5rem, 10.5rem);
-      @include curserPointer;
-
-      .toDo_first {
-        padding-left: 2rem;
-
-        > img {
-          @include box(4.4rem);
-        }
-      }
-
-      .toDo_second {
-        @include flexbox($fd: column);
-        padding-right: 2rem;
-
-        div:first-of-type {
-          @include box(31px, 77px);
-          @include typo(64px, 600, 76.8px, center);
-        }
-
-        div:nth-of-type(2) {
-          @include box(63px, 24px);
-          @include typo(20px, 400, 24px, center);
-        }
-      }
+     
     }
 
     .done {
       grid-area: done;
-      @include flexbox($g: 1rem);
-      @include box(16.5rem, 10.5rem);
-      @include curserPointer;
-
-      .done_first {
-        padding-left: 2rem;
-
-        > img {
-          @include box(4.4rem);
-        }
-      }
-
-      .done_second {
-        @include flexbox($fd: column);
-        padding-right: 2rem;
-
-        div:first-of-type {
-          @include box(31px, 77px);
-          @include typo(64px, 600, 76.8px, center);
-        }
-
-        div:nth-of-type(2) {
-          @include box(63px, 24px);
-          @include typo(20px, 400, 24px, center);
-        }
-      }
+      
     }
 
     .priority {
       grid-area: priority;
-      @include flexbox();
-      @include box(35rem, 10.5rem);
-      @include curserPointer;
+     
+      
 
-      .prio_first {
-        @include flexbox($g: 1rem);
-        padding: 2rem;
-
-        > img {
-          @include box(4.4rem);
-        }
-      }
-
-      .prio_second {
-        @include flexbox($fd: column);
-
-        div:first-of-type {
-          @include box(31px, 77px);
-          @include typo(64px, 600, 76.8px, center);
-        }
-
-        div:nth-of-type(2) {
-          @include box(63px, 24px);
-          @include typo(20px, 400, 24px, center);
-        }
-      }
-
-      .prio_third {
-        @include flexbox($fd: column);
-        padding: 2rem;
-
-        .date {
-          @include typo(21px, 700, 25.2px);
-        }
-      }
+    
     }
 
     .taskInBoard {
       grid-area: taskInBoard;
-      @include flexbox($fd: column);
-      @include curserPointer;
-
-      div:first-of-type {
-        @include typo(64px, 600, 76.8px);
-      }
-      div:nth-of-type(2) {
-        @include typo(20px, 400, 24px, center);
-      }
+     
     }
 
     .taskInProgress {
       grid-area: taskInProgress;
-      @include flexbox($fd: column);
-      @include curserPointer;
-
-      div:first-of-type {
-        @include typo(64px, 600, 76.8px);
-      }
-      div:nth-of-type(2) {
-        @include typo(20px, 400, 24px, center);
-      }
+     
     }
 
     .feedback {
       grid-area: feedback;
-      @include flexbox($fd: column);
-      @include curserPointer;
-
-      div:first-of-type {
-        @include typo(64px, 600, 76.8px);
-      }
-      div:nth-of-type(2) {
-        @include typo(20px, 400, 24px, center);
-      }
+      
     }
   }
 
