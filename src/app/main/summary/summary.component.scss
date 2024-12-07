@@ -63,32 +63,51 @@ section {
 
     .middle_card {
       @include box(100%, auto);
+      transition: color 0.5s ease, background-color 0.5s ease,
+        transform 0.5s ease;
 
       &:hover {
         cursor: pointer;
         color: $clr_bg;
         background-color: $clr_dark_gray;
-        
+        transform: scale(0.955);
       }
     }
 
     .big_card {
       @include box(100%, auto);
 
+      > :first-child {
+        .info_icon {
+          @include bgCover;
+          background-image: url("../../../../public/img/summary/prio.svg");
+          transition: transform 0.5s ease;
+        }
+      }
+
       &:hover {
         cursor: pointer;
         color: $clr_bg;
         background-color: $clr_dark_gray;
+
+        > :first-child {
+          .info_icon {
+            transform: scale(1.1);
+          }
+        }
       }
     }
 
     .small_card {
       @include box(100%, auto);
+      transition: color 0.5s ease, background-color 0.5s ease,
+        transform 0.5s ease;
 
       &:hover {
         cursor: pointer;
         color: $clr_bg;
         background-color: $clr_dark_gray;
+        transform: scale(0.955);
       }
     }
 
@@ -112,10 +131,10 @@ section {
         padding: 1rem;
 
         > :first-child {
-
           .info_icon {
             @include bgCover;
             background-image: url("../../../../public/img/summary/pen.svg");
+            transition: background-image 0.6s ease, transform 0.6s ease;
           }
         }
 
@@ -123,6 +142,7 @@ section {
           > :first-child {
             .info_icon {
               background-image: url("../../../../public/img/summary/pen_hover.svg");
+              transform: scale(1.1);
             }
           }
         }
@@ -137,6 +157,7 @@ section {
           .info_icon {
             @include bgCover;
             background-image: url("../../../../public/img/summary/check.svg");
+            transition: background-image 0.6s ease, transform 0.6s ease;
           }
         }
 
@@ -144,6 +165,7 @@ section {
           > :first-child {
             .info_icon {
               background-image: url("../../../../public/img/summary/check_hover.svg");
+              transform: scale(1.1);
             }
           }
         }
