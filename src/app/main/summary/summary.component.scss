@@ -63,17 +63,33 @@ section {
 
     .middle_card {
       @include box(100%, auto);
-      @include curserPointer;
+
+      &:hover {
+        cursor: pointer;
+        color: $clr_bg;
+        background-color: $clr_dark_gray;
+        
+      }
     }
 
     .big_card {
       @include box(100%, auto);
-      @include curserPointer;
+
+      &:hover {
+        cursor: pointer;
+        color: $clr_bg;
+        background-color: $clr_dark_gray;
+      }
     }
 
     .small_card {
       @include box(100%, auto);
-      @include curserPointer;
+
+      &:hover {
+        cursor: pointer;
+        color: $clr_bg;
+        background-color: $clr_dark_gray;
+      }
     }
 
     .container {
@@ -96,9 +112,18 @@ section {
         padding: 1rem;
 
         > :first-child {
+
           .info_icon {
             @include bgCover;
             background-image: url("../../../../public/img/summary/pen.svg");
+          }
+        }
+
+        &:hover {
+          > :first-child {
+            .info_icon {
+              background-image: url("../../../../public/img/summary/pen_hover.svg");
+            }
           }
         }
       }
@@ -112,6 +137,14 @@ section {
           .info_icon {
             @include bgCover;
             background-image: url("../../../../public/img/summary/check.svg");
+          }
+        }
+
+        &:hover {
+          > :first-child {
+            .info_icon {
+              background-image: url("../../../../public/img/summary/check_hover.svg");
+            }
           }
         }
       }
