@@ -10,7 +10,10 @@
 
     <div class="content_wrapper_left">
       <div class="container">
-        <div class="toDo card_wrapper middle_card">
+        <div
+          class="toDo card_wrapper middle_card"
+          (click)="uiService.navigate('board')"
+        >
           <div>
             <div class="info_icon"></div>
           </div>
@@ -20,7 +23,10 @@
           </div>
         </div>
 
-        <div class="done card_wrapper middle_card">
+        <div
+          class="done card_wrapper middle_card"
+          (click)="uiService.navigate('board')"
+        >
           <div>
             <div class="info_icon"></div>
           </div>
@@ -30,7 +36,10 @@
           </div>
         </div>
 
-        <div class="priority card_wrapper big_card">
+        <div
+          class="priority card_wrapper big_card"
+          (click)="uiService.navigate('board')"
+        >
           <div>
             <div>
               <div class="info_icon"></div>
@@ -47,7 +56,10 @@
           </div>
         </div>
 
-        <div class="taskInBoard card_wrapper small_card">
+        <div
+          class="taskInBoard card_wrapper small_card"
+          (click)="uiService.navigate('board')"
+        >
           <div>
             <div class="sum_counter">5</div>
             <div class="sum_txt">
@@ -57,7 +69,10 @@
           </div>
         </div>
 
-        <div class="taskInProgress card_wrapper small_card">
+        <div
+          class="taskInProgress card_wrapper small_card"
+          (click)="uiService.navigate('board')"
+        >
           <div>
             <div class="sum_counter">2</div>
             <div class="sum_txt">
@@ -67,7 +82,10 @@
           </div>
         </div>
 
-        <div class="feedback card_wrapper small_card">
+        <div
+          class="feedback card_wrapper small_card"
+          (click)="uiService.navigate('board')"
+        >
           <div>
             <div class="sum_counter">2</div>
             <div class="sum_txt">

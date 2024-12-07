@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
-import { NavbarComponent } from "../../shared/components/navbar/navbar.component";
-import { HeaderComponent } from "../../shared/components/header/header.component";
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../shared/services/auth.service';
+import { UiService } from '../../shared/services/ui.service';
 
 @Component({
   selector: 'app-summary',
   standalone: true,
-  imports: [NavbarComponent, HeaderComponent],
+  imports: [],
   templateUrl: './summary.component.html',
   styleUrl: './summary.component.scss'
 })
 export class SummaryComponent {
+  router = inject(Router);
+  authService = inject(AuthService);
+  uiService = inject(UiService);
 
+  
 }
