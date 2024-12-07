@@ -76,12 +76,14 @@ section {
 
     .big_card {
       @include box(100%, auto);
+      transition: color 0.5s ease, background-color 0.5s ease,
+        transform 0.5s ease;
 
       > :first-child {
         .info_icon {
           @include bgCover;
           background-image: url("../../../../public/img/summary/prio.svg");
-          transition: transform 0.5s ease;
+          transition: transform 0.5s ease, background-image 0.5s ease;
         }
       }
 
@@ -89,12 +91,7 @@ section {
         cursor: pointer;
         color: $clr_bg;
         background-color: $clr_dark_gray;
-
-        > :first-child {
-          .info_icon {
-            transform: scale(1.1);
-          }
-        }
+        transform: scale(0.955);
       }
     }
 
@@ -179,9 +176,19 @@ section {
         > div:first-child {
           @include flexbox($g: 2rem);
 
-          > div:first-child {
+          .info_icon {
             @include bgCover;
             background-image: url("../../../../public/img/summary/prio.svg");
+            transition: transform 0.6s ease;
+          }
+        }
+
+        &:hover {
+          > :first-child {
+            .info_icon {
+              background-image: url("../../../../public/img/summary/prio_hover.svg");
+              transform: scale(1.1);
+            }
           }
         }
 
