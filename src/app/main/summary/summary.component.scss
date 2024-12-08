@@ -62,20 +62,19 @@ section {
 
     .middle_card {
       @include box(100%, auto);
-      transition: color 0.5s ease, background-color 0.5s ease,
+      transition: color 0.5s ease, background-color 0.8s ease,
         transform 0.5s ease;
 
       &:hover {
         cursor: pointer;
         color: $clr_bg;
         background-color: $clr_dark_gray;
-        transform: scale(0.955);
       }
     }
 
     .big_card {
       @include box(100%, auto);
-      transition: color 0.5s ease, background-color 0.5s ease,
+      transition: color 0.5s ease, background-color 0.8s ease,
         transform 0.5s ease;
 
       > :first-child {
@@ -90,20 +89,18 @@ section {
         cursor: pointer;
         color: $clr_bg;
         background-color: $clr_dark_gray;
-        transform: scale(0.955);
       }
     }
 
     .small_card {
       @include box(100%, auto);
-      transition: color 0.5s ease, background-color 0.5s ease,
+      transition: color 0.5s ease, background-color 0.8s ease,
         transform 0.5s ease;
 
       &:hover {
         cursor: pointer;
         color: $clr_bg;
         background-color: $clr_dark_gray;
-        transform: scale(0.955);
       }
     }
 
@@ -249,11 +246,6 @@ section {
         height: auto;
         margin: 0 0 0 1rem;
 
-        // h1 {
-        //   font-size: 3rem;
-
-        // }
-
         span {
           font-size: 27px;
         }
@@ -301,10 +293,6 @@ section {
       > div {
         align-items: unset !important;
         flex-direction: column !important;
-
-        // span {
-        //   font-size: 1.25rem !important;
-        // }
 
         .seperator {
           width: 7.5rem !important;
