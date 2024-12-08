@@ -16,9 +16,7 @@ section {
       margin: 1rem 1rem;
 
       h1 {
-        font-size: 3.75rem;
-        font-size: clamp(3rem, 2.5vw, 3.75rem);
-
+        font-size: clamp(3rem, 4vw, 4rem);
         margin: 0;
       }
 
@@ -27,6 +25,7 @@ section {
 
         span {
           font-size: 27px;
+          font-size: clamp(1.25rem, 3vw, 2rem);
         }
 
         .seperator {
@@ -112,6 +111,7 @@ section {
       width: 560px;
       height: 560px;
       margin: 2rem 1rem 0 1rem;
+      padding: 1rem;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -244,21 +244,30 @@ section {
     margin-left: 0;
     padding: 1rem 0 0 2rem;
 
-    .head {
-      h1 {
-        font-size: 3rem;
-        margin: 0;
+    .content {
+      .head {
+        height: auto;
+        margin: 0 0 0 1rem;
+
+        // h1 {
+        //   font-size: 3rem;
+
+        // }
+
+        span {
+          font-size: 27px;
+        }
+
+        .seperator {
+          height: 0px;
+          width: 60px;
+          border-bottom: 3px solid $clr_light_blue;
+          margin-top: 0.3rem;
+        }
       }
 
-      span {
-        font-size: 27px;
-      }
-
-      .seperator {
-        height: 0px;
-        width: 60px;
-        border-bottom: 3px solid $clr_light_blue;
-        margin-top: 0.3rem;
+      .container {
+        margin: 1rem 1rem 0 1rem;
       }
     }
   }
@@ -267,6 +276,10 @@ section {
 @media only screen and (max-width: $media_size_tablet_xm) {
   section {
     justify-content: center;
+
+    .container {
+      width: auto !important;
+    }
 
     .greeting_wrapper {
       display: none;
@@ -282,14 +295,16 @@ section {
       flex-direction: column !important;
       align-items: unset !important;
       height: auto !important;
+      margin: 0 0 0 1rem !important;
+      padding: 0 0 0 1rem !important;
 
       > div {
         align-items: unset !important;
         flex-direction: column !important;
 
-        span {
-          font-size: 1.25rem !important;
-        }
+        // span {
+        //   font-size: 1.25rem !important;
+        // }
 
         .seperator {
           width: 7.5rem !important;
