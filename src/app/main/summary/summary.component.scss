@@ -42,12 +42,12 @@ section {
     }
 
     .info_icon {
-      width: clamp(3.75rem, 6vw, 5rem);
-      height: clamp(3.75rem, 6vw, 5rem);
+      width: clamp(4.5rem, 6vw, 5.5rem);
+      height: clamp(4.5rem, 6vw, 5.5rem);
     }
 
     .sum_counter {
-      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-size: clamp(3rem, 6vw, 4rem);
       font-weight: 600;
       line-height: 76.8px;
       text-align: center;
@@ -167,11 +167,11 @@ section {
 
       .priority {
         grid-area: priority;
-        @include flexbox($g: 1rem);
+        @include flexbox($g: 2rem);
         padding: 1rem 4rem;
 
         > div:first-child {
-          @include flexbox($g: 1rem);
+          @include flexbox($g: 1.5rem);
 
           .info_icon {
             @include bgCover;
@@ -191,10 +191,9 @@ section {
 
         .seperator {
           height: 0;
-          min-width: 7rem;
+          width: 7rem;
           rotate: 90deg;
           border-bottom: 2px solid $clr_card_border;
-          /* margin: 0.5rem; */
         }
 
         > div:nth-child(3) {
@@ -260,7 +259,7 @@ section {
       }
 
       .container {
-        margin: 1rem 1rem 0 1rem;
+        margin: 1rem 0;
         gap: 1rem 1rem;
       }
     }
@@ -275,7 +274,7 @@ section {
       width: auto !important;
 
       .priority {
-        gap: 1rem;
+        gap: 1rem !important;
 
         > div:first-child {
           gap: 1rem;
@@ -315,7 +314,29 @@ section {
       .container {
         gap: 0.5rem;
         padding: 0.5rem;
-        margin: .5rem 0 0 0;
+        margin: 0.5rem 0 0 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $media_size_phone_xs) {
+  section {
+    .content {
+      .container {
+        .toDo {
+          gap: 0.5rem;
+          padding: 0;
+        }
+        .done {
+          gap: 0.5rem;
+          padding: 0;
+        }
+        .priority {
+          > div:first-child {
+            gap: 0;
+          }
+        }
       }
     }
   }
