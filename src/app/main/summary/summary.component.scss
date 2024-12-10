@@ -47,14 +47,14 @@ section {
     }
 
     .sum_counter {
-      font-size: clamp(3rem, 6vw, 4rem);
+      font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 600;
       line-height: 76.8px;
       text-align: center;
     }
 
     .sum_txt {
-      font-size: clamp(16px, 2.5vw, 20px);
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
       font-weight: 400;
       line-height: 24px;
       text-align: center;
@@ -167,11 +167,11 @@ section {
 
       .priority {
         grid-area: priority;
-        @include flexbox($g: 2rem);
+        @include flexbox($g: 1rem);
         padding: 1rem 4rem;
 
         > div:first-child {
-          @include flexbox($g: 2rem);
+          @include flexbox($g: 1rem);
 
           .info_icon {
             @include bgCover;
@@ -190,14 +190,15 @@ section {
         }
 
         .seperator {
-          height: 0px;
-          width: 7rem;
+          height: 0;
+          min-width: 7rem;
           rotate: 90deg;
           border-bottom: 2px solid $clr_card_border;
+          /* margin: 0.5rem; */
         }
 
         > div:nth-child(3) {
-          @include flexbox($fd: column, $g: 1rem);
+          @include flexbox($ai: none, $fd: column, $g: 1rem);
 
           :first-child {
             @include typo(21px, 700, 25.2px);
@@ -260,6 +261,7 @@ section {
 
       .container {
         margin: 1rem 1rem 0 1rem;
+        gap: 1rem 1rem;
       }
     }
   }
@@ -271,6 +273,14 @@ section {
 
     .container {
       width: auto !important;
+
+      .priority {
+        gap: 1rem;
+
+        > div:first-child {
+          gap: 1rem;
+        }
+      }
     }
 
     .greeting_wrapper {
@@ -298,6 +308,14 @@ section {
           width: 7.5rem !important;
           rotate: unset !important;
         }
+      }
+    }
+
+    .content {
+      .container {
+        gap: 0.5rem;
+        padding: 0.5rem;
+        margin: .5rem 0 0 0;
       }
     }
   }
