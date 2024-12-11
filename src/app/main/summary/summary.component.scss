@@ -9,6 +9,8 @@ section {
   padding-left: 180px;
 
   .content {
+    // @include flexbox($fd: column);
+
     .head {
       display: flex;
       align-items: center;
@@ -42,21 +44,19 @@ section {
     }
 
     .info_icon {
-      width: clamp(4.5rem, 6vw, 5.5rem);
-      height: clamp(4.5rem, 6vw, 5.5rem);
+      width: clamp(3rem, 6vw, 5.5rem);
+      height: clamp(3rem, 6vw, 5.5rem);
     }
 
     .sum_counter {
-      font-size: clamp(3rem, 6vw, 4rem);
+      font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 600;
-      line-height: 76.8px;
       text-align: center;
     }
 
     .sum_txt {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-size: clamp(0.75rem, 2.5vw, 1.25rem);
       font-weight: 400;
-      line-height: 24px;
       text-align: center;
     }
 
@@ -106,7 +106,6 @@ section {
 
     .container {
       width: 560px;
-      height: 560px;
       margin: 2rem 1rem 0 1rem;
       padding: 1rem;
       display: grid;
@@ -191,7 +190,7 @@ section {
 
         .seperator {
           height: 0;
-          width: 7rem;
+          width: 6rem;
           rotate: 90deg;
           border-bottom: 2px solid $clr_card_border;
         }
@@ -259,8 +258,8 @@ section {
       }
 
       .container {
-        margin: 1rem 0;
-        gap: 1rem 1rem;
+        margin: 3rem 0 1rem 0;
+      /*   gap: 1rem 1rem; */
       }
     }
   }
@@ -312,9 +311,9 @@ section {
 
     .content {
       .container {
-        gap: 0.5rem;
+        gap: 1rem;
         padding: 0.5rem;
-        margin: 0.5rem 0 0 0;
+        margin: 2rem 0 0 0;
       }
     }
   }
