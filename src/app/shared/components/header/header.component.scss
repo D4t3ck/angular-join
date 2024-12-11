@@ -52,6 +52,9 @@ section {
 }
 
 @media only screen and (max-width: $media_size_phone_xm) {
+  section {
+    height: 3.75rem;
+  }
   #header {
     > span {
       display: none;
