@@ -9,7 +9,7 @@ import {
 } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { UiService } from './ui.service';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -54,12 +54,15 @@ export class AuthService {
     }
   }
 
-  async signOut() {
+  async signOut(): Promise<void> {
     try {
       await signOut(this.auth);
       this.uiService.navigate('/', false);
     } catch (error) {
-      this.handleFirebaseError(error as FirebaseError);
+      // console.error('Abmelden fehlgeschlagen:', error.message);
+      throw new Error(
+        'Abmeldung ist fehlgeschlagen. Bitte versuche es erneut.'
+      );
     }
   }
 
@@ -68,6 +71,9 @@ export class AuthService {
    * @param error - The FirebaseError instance
    */
   private handleFirebaseError(error: FirebaseError): void {
+    // Beispiel: Logging-Service hinzufügen
+    this.logError(error);
+
     switch (error.code) {
       case 'auth/email-already-in-use':
         throw new Error(
@@ -92,6 +98,16 @@ export class AuthService {
   }
 
   /**
+   * Log Firebase errors for debugging or monitoring
+   */
+  private logError(error: FirebaseError): void {
+    // Log-Service oder externe Monitoring-Tools wie Sentry, Firebase Crashlytics verwenden
+    console.error(
+      `[FirebaseError]: Code: ${error.code}, Message: ${error.message}`
+    );
+  }
+
+  /**
    * Toggle guest mode state.
    * @param isGuestMode - Set guest mode on or off
    */
@@ -103,7 +119,7 @@ export class AuthService {
    * Get the current guest mode state.
    * @returns Observable<boolean> - The guest mode state
    */
-  isGuestMode() {
+  isGuestMode(): Observable<boolean> {
     return this.guestMode$.asObservable();
   }
 }
