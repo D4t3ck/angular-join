@@ -4,6 +4,7 @@ import {
   Auth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
   user,
 } from '@angular/fire/auth';
 import { Router } from '@angular/router';
@@ -47,7 +48,16 @@ export class AuthService {
       await signInWithEmailAndPassword(this.auth, email, password);
       const redirect =
         this.router.routerState.snapshot.root.queryParams['redirect'] || '/';
-      this.router.navigate([redirect]);
+      this.uiService.navigate(redirect, true);
+    } catch (error) {
+      this.handleFirebaseError(error as FirebaseError);
+    }
+  }
+
+  async signOut() {
+    try {
+      await signOut(this.auth);
+      this.uiService.navigate('/', false);
     } catch (error) {
       this.handleFirebaseError(error as FirebaseError);
     }
@@ -75,7 +85,9 @@ export class AuthService {
 
       default:
         console.error('Ein unbekannter Fehler ist aufgetreten:', error.message);
-        throw new Error('Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es später erneut.');
+        throw new Error(
+          'Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es später erneut.'
+        );
     }
   }
 
