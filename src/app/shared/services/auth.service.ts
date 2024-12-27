@@ -59,10 +59,8 @@ export class AuthService {
       await signOut(this.auth);
       this.uiService.navigate('/', false);
     } catch (error) {
-      // console.error('Abmelden fehlgeschlagen:', error.message);
-      throw new Error(
-        'Abmeldung ist fehlgeschlagen. Bitte versuche es erneut.'
-      );
+      // console.error('Sign out failed:', error.message);
+      throw new Error('Sign out failed. Please try again.');
     }
   }
 
@@ -71,28 +69,28 @@ export class AuthService {
    * @param error - The FirebaseError instance
    */
   private handleFirebaseError(error: FirebaseError): void {
-    // Beispiel: Logging-Service hinzufügen
+    // Example: Add logging service
     this.logError(error);
 
     switch (error.code) {
       case 'auth/email-already-in-use':
         throw new Error(
-          'Diese E-Mail-Adresse wird bereits verwendet. Bitte versuche es mit einer anderen E-Mail-Adresse.'
+          'This email address is already in use. Please try another email address.'
         );
 
       case 'auth/wrong-password':
-        throw new Error('Falsches Passwort. Bitte überprüfe deine Eingabe.');
+        throw new Error('Incorrect password. Please check your input.');
 
       case 'auth/user-not-found':
-        throw new Error('Kein Benutzer mit dieser E-Mail-Adresse gefunden.');
+        throw new Error('No user found with this email address.');
 
       case 'auth/invalid-email':
-        throw new Error('Die eingegebene E-Mail-Adresse ist ungültig.');
+        throw new Error('The email address entered is invalid.');
 
       default:
-        console.error('Ein unbekannter Fehler ist aufgetreten:', error.message);
+        console.error('An unknown error occurred:', error.message);
         throw new Error(
-          'Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es später erneut.'
+          'An unexpected error occurred. Please try again later.'
         );
     }
   }
