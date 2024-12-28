@@ -59,7 +59,6 @@ export class AuthService {
       await signOut(this.auth);
       this.uiService.navigate('/', false);
     } catch (error) {
-      // console.error('Sign out failed:', error.message);
       throw new Error('Sign out failed. Please try again.');
     }
   }
@@ -69,7 +68,6 @@ export class AuthService {
    * @param error - The FirebaseError instance
    */
   private handleFirebaseError(error: FirebaseError): void {
-    // Example: Add logging service
     this.logError(error);
 
     switch (error.code) {
@@ -99,7 +97,6 @@ export class AuthService {
    * Log Firebase errors for debugging or monitoring
    */
   private logError(error: FirebaseError): void {
-    // Log-Service oder externe Monitoring-Tools wie Sentry, Firebase Crashlytics verwenden
     console.error(
       `[FirebaseError]: Code: ${error.code}, Message: ${error.message}`
     );
