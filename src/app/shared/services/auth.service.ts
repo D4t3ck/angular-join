@@ -10,6 +10,7 @@ import {
 import { Router } from '@angular/router';
 import { UiService } from './ui.service';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { ErrorService } from './error.service';
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +19,7 @@ export class AuthService {
   private auth = inject(Auth);
   private router = inject(Router);
   private uiService = inject(UiService);
+  private errorService = inject(ErrorService);
 
   user$ = user(this.auth);
   private guestMode$ = new BehaviorSubject<boolean>(false);
@@ -34,7 +36,7 @@ export class AuthService {
       await createUserWithEmailAndPassword(this.auth, email, password);
       this.uiService.navigate('/');
     } catch (error) {
-      this.handleFirebaseError(error as FirebaseError);
+      this.errorService.handleFirebaseError(error as FirebaseError);
     }
   }
 
@@ -50,7 +52,7 @@ export class AuthService {
         this.router.routerState.snapshot.root.queryParams['redirect'] || '/';
       this.uiService.navigate(redirect, true);
     } catch (error) {
-      this.handleFirebaseError(error as FirebaseError);
+      this.errorService.handleFirebaseError(error as FirebaseError);
     }
   }
 
@@ -61,45 +63,6 @@ export class AuthService {
     } catch (error) {
       throw new Error('Sign out failed. Please try again.');
     }
-  }
-
-  /**
-   * Handle Firebase errors and throw user-friendly messages.
-   * @param error - The FirebaseError instance
-   */
-  private handleFirebaseError(error: FirebaseError): void {
-    this.logError(error);
-
-    switch (error.code) {
-      case 'auth/email-already-in-use':
-        throw new Error(
-          'This email address is already in use. Please try another email address.'
-        );
-
-      case 'auth/wrong-password':
-        throw new Error('Incorrect password. Please check your input.');
-
-      case 'auth/user-not-found':
-        throw new Error('No user found with this email address.');
-
-      case 'auth/invalid-email':
-        throw new Error('The email address entered is invalid.');
-
-      default:
-        console.error('An unknown error occurred:', error.message);
-        throw new Error(
-          'An unexpected error occurred. Please try again later.'
-        );
-    }
-  }
-
-  /**
-   * Log Firebase errors for debugging or monitoring
-   */
-  private logError(error: FirebaseError): void {
-    console.error(
-      `[FirebaseError]: Code: ${error.code}, Message: ${error.message}`
-    );
   }
 
   /**
