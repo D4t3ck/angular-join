@@ -5,12 +5,20 @@
     
         <div class="sign_up_desktop">
           <p>Not a Join user?</p>
-          <button class="button_full" (click)="uiService.navigate('signup')">Sign up</button>
+          <button class="button_full" (click)="uiService.toggleSignUp()">Sign up</button>
         </div>
       </div>
 
 
-      <app-login></app-login>
+      @if(!uiService.showSignUp){
+
+          <app-login></app-login>
+      }
+
+      @if(uiService.showSignUp){
+
+          <app-sign-up></app-sign-up>
+      }
 
       <div class="sign_up_mobile">
         <p>Not a Join user?</p>

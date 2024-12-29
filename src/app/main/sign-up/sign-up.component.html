@@ -1,12 +1,8 @@
 <section>
-  <div class="head_wrapper">
-    <img class="logo_img" src="/img/log_in/logo_desktop.png" alt="Logo" />
-  </div>
-
   <div class="card card_wrapper">
     <div class="card_head">
       <img
-        (click)="uiService.goBack()"
+        (click)="uiService.toggleSignUp()"
         src="/img/signUp/arrow_left.png"
         alt=""
       />
@@ -98,9 +94,5 @@
         </div>
       </div>
     </form>
-  </div>
-
-  <div class="legal_informations">
-    <p (click)="uiService.navigate('imprint', false)">Imprint</p>
   </div>
 </section>

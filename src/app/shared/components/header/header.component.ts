@@ -24,6 +24,6 @@ export class HeaderComponent {
 
   logout() {
     this.uiService.toggleHeaderMenu();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 }

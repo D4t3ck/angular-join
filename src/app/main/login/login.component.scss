@@ -3,29 +3,7 @@
 @import "../../shared/SCSS/variables.scss";
 
 section {
-  @include flexbox($jc: space-evenly, $fd: column);
-  height: 100dvh;
-  margin-left: 0;
-}
-
-.head_wrapper {
-  @include flexbox($jc: space-between);
-  width: 100%;
-
-  .logo_img {
-    margin-left: 10rem;
-  }
-
-  .sign_up_desktop {
-    display: flex;
-    gap: 1rem;
-    margin-right: 10rem;
-  }
-}
-
-.sign_up_mobile {
-  display: none;
-  gap: 1rem;
+  @include flexbox();
 }
 
 .card {
@@ -160,48 +138,12 @@ h1 {
   width: 100%;
 }
 
-.legal_informations {
-  @include flexbox($g: 1rem);
-  width: 100%;
-
-  p {
-    width: 130px;
-    padding: 0.5rem;
-    color: $clr_font_light_grey;
-    font-size: 16px;
-    font-weight: 200;
-    text-align: center;
-
-    &:hover {
-      cursor: pointer;
-      font-weight: bold;
-      color: $clr_light_blue;
-    }
-  }
-}
-
 @media only screen and (max-width: $media_size_tablet_xs) {
-  .head_wrapper {
-    .logo_img {
-      @include box(70px, 80px);
-      margin-left: 1rem;
-    }
-
-    .sign_up_desktop {
-      display: none;
-    }
-  }
-
   .buttons_wrapper {
     flex-direction: column;
 
     .button_full {
       width: 160px;
     }
-  }
-
-  .sign_up_mobile {
-    display: flex;
-    margin-top: 1rem;
   }
 }

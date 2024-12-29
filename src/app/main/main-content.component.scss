@@ -3,7 +3,7 @@
 @import ".././shared/SCSS/variables.scss";
 
 section {
-  @include flexbox($jc: space-evenly, $fd: column);
+  @include flexbox($ai: unset, $jc: space-evenly, $fd: column);
   height: 100dvh;
   margin-left: 0;
 }
@@ -47,3 +47,29 @@ section {
     }
   }
 }
+
+@media only screen and (max-width: $media_size_tablet_xs) {
+    .head_wrapper {
+      .logo_img {
+        @include box(70px, 80px);
+        margin-left: 1rem;
+      }
+  
+      .sign_up_desktop {
+        display: none;
+      }
+    }
+  
+    .buttons_wrapper {
+      flex-direction: column;
+  
+      .button_full {
+        width: 160px;
+      }
+    }
+  
+    .sign_up_mobile {
+      display: flex;
+      margin-top: 1rem;
+    }
+  }

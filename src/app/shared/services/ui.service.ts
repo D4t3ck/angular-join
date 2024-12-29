@@ -11,6 +11,7 @@ export class UiService {
 
   userLoggedIn: boolean = false;
   navbarVisible: boolean = false;
+  showSignUp: boolean = false;
 
   constructor() {}
 
@@ -28,6 +29,14 @@ export class UiService {
 
   toggleHeaderMenu() {
     this.navbarVisible = !this.navbarVisible;
+  }
+
+  toggleSignUp(){
+    this.showSignUp = !this.showSignUp;
+  }
+
+  closeSignUp(){
+    this.showSignUp = false;
   }
 
   closeHeaderMenu() {
