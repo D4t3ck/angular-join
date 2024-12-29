@@ -1,33 +1,35 @@
 <section>
+  <div class="head_wrapper">
+    <img class="logo_img" src="/img/log_in/logo_desktop.png" alt="Logo" />
 
-    <div class="head_wrapper">
-        <img class="logo_img" src="/img/log_in/logo_desktop.png" alt="Logo" />
-    
+    @if(!uiService.showSignUp) {
+
         <div class="sign_up_desktop">
           <p>Not a Join user?</p>
-          <button class="button_full" (click)="uiService.toggleSignUp()">Sign up</button>
+          <button class="button_full" (click)="uiService.toggleSignUp()">
+            Sign up
+          </button>
         </div>
-      </div>
+    }
+  </div>
 
+  @if(!uiService.showSignUp){
 
-      @if(!uiService.showSignUp){
+  <app-login></app-login>
+  } @if(uiService.showSignUp){
 
-          <app-login></app-login>
-      }
+  <app-sign-up></app-sign-up>
+  }
 
-      @if(uiService.showSignUp){
+  <div class="sign_up_mobile">
+    <p>Not a Join user?</p>
+    <button class="button_full" (click)="uiService.navigate('signup')">
+      Sign up
+    </button>
+  </div>
 
-          <app-sign-up></app-sign-up>
-      }
-
-      <div class="sign_up_mobile">
-        <p>Not a Join user?</p>
-        <button class="button_full" (click)="uiService.navigate('signup')">Sign up</button>
-      </div>
-    
-      <div class="legal_informations">
-        <p (click)="uiService.navigate('imprint', false)">Imprint</p>
-        <p (click)="uiService.navigate('privacy-policy', false)">Privacy Policy</p>
-      </div>
-
+  <div class="legal_informations">
+    <p (click)="uiService.navigate('imprint', false)">Imprint</p>
+    <p (click)="uiService.navigate('privacy-policy', false)">Privacy Policy</p>
+  </div>
 </section>
