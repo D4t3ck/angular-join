@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { MainContentComponent } from './main/main-content.component';
 import { LoginComponent } from './main/login/login.component';
 import { SignUpComponent } from './main/sign-up/sign-up.component';
 import { SummaryComponent } from './main/summary/summary.component';
@@ -12,6 +13,7 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'main', component: MainContentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'summary', component: SummaryComponent },

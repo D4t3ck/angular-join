@@ -5,7 +5,7 @@ import { HeaderComponent } from "../../shared/components/header/header.component
 @Component({
   selector: 'app-board',
   standalone: true,
-  imports: [NavbarComponent, HeaderComponent],
+  imports: [],
   templateUrl: './board.component.html',
   styleUrl: './board.component.scss'
 })
