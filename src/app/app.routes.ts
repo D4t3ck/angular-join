@@ -12,7 +12,7 @@ import { UserHelpComponent } from './user-informations/user-help/user-help.compo
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
   { path: 'main', component: MainContentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
