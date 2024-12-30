@@ -4,32 +4,32 @@
 
     @if(!uiService.showSignUp) {
 
-        <div class="sign_up_desktop">
-          <p>Not a Join user?</p>
-          <button class="button_full" (click)="uiService.toggleSignUp()">
-            Sign up
-          </button>
-        </div>
+    <div class="sign_up_desktop">
+      <p>Not a Join user?</p>
+      <button class="button_full" (click)="uiService.toggleSignUp()">
+        Sign up
+      </button>
+    </div>
     }
   </div>
 
   @if(!uiService.showSignUp){
-
   <app-login></app-login>
   } @if(uiService.showSignUp){
-
-  <app-sign-up></app-sign-up>
-  }
+  <app-sign-up></app-sign-up>} @if (!uiService.showSignUp) {
 
   <div class="sign_up_mobile">
     <p>Not a Join user?</p>
-    <button class="button_full" (click)="uiService.navigate('signup')">
+    <button class="button_full" (click)="uiService.toggleSignUp()">
       Sign up
     </button>
   </div>
+  }
 
   <div class="legal_informations">
     <p (click)="uiService.navigate('imprint', false)">Imprint</p>
+    @if (!uiService.showSignUp){
     <p (click)="uiService.navigate('privacy-policy', false)">Privacy Policy</p>
+    }
   </div>
 </section>

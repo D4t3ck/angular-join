@@ -49,28 +49,20 @@ section {
 }
 
 @media only screen and (max-width: $media_size_tablet_xs) {
-    .head_wrapper {
-      .logo_img {
-        @include box(70px, 80px);
-        margin-left: 1rem;
-      }
-  
-      .sign_up_desktop {
-        display: none;
-      }
+  .head_wrapper {
+    .logo_img {
+      @include box(70px, 80px);
+      margin-left: 1rem;
     }
-  
-    .buttons_wrapper {
-      flex-direction: column;
-  
-      .button_full {
-        width: 160px;
-      }
-    }
-  
-    .sign_up_mobile {
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
+
+    .sign_up_desktop {
+      display: none;
     }
   }
+
+  .sign_up_mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
