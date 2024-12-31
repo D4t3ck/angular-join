@@ -4,7 +4,7 @@
 
 section {
   @include flexbox($jc: space-evenly, $fd: column);
-  height: 100dvh;
+  height: 575px;
 }
 
 .head_wrapper {
@@ -153,12 +153,16 @@ section {
     }
   }
 
-  .privacy_policy {
-    color: $clr_light_blue;
+  p {
+    font-size: 15px;
 
-    &:hover {
-      cursor: pointer;
+    .privacy_policy {
       color: $clr_light_blue;
+
+      &:hover {
+        cursor: pointer;
+        color: $clr_light_blue;
+      }
     }
   }
 }
