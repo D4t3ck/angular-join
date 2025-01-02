@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FirebaseError } from 'firebase/app';
 import { Router, RouterModule } from '@angular/router';
 import { UiService } from '../../shared/services/ui.service';
+import { ErrorService } from '../../shared/services/error.service';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ export class LoginComponent {
   router = inject(Router);
   authService = inject(AuthService);
   uiService = inject(UiService);
+  private errorService = inject(ErrorService);
 
   errorMessage: string = '';
 
@@ -87,27 +89,7 @@ export class LoginComponent {
           this.saveToLocalStorage();
         }
       } catch (error) {
-        const firebaseError = error as FirebaseError;
-
-        // Benutzerfreundliche Fehlermeldungen
-        switch (firebaseError.code) {
-          case 'auth/wrong-password':
-            this.errorMessage = 'Das eingegebene Passwort ist falsch.';
-            break;
-          case 'auth/user-not-found':
-            this.errorMessage =
-              'Es wurde kein Benutzer mit dieser E-Mail-Adresse gefunden.';
-            break;
-          case 'auth/invalid-email':
-            this.errorMessage = 'Die eingegebene E-Mail-Adresse ist ungültig.';
-            break;
-          default:
-            this.errorMessage =
-              'Ein unbekannter Fehler ist aufgetreten. Bitte versuche es erneut.';
-            break;
-        }
-
-        console.error('Fehler bei der Anmeldung:', firebaseError);
+        this.errorService.handleFirebaseError(error as FirebaseError);
       }
     }
   }
