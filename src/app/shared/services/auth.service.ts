@@ -20,11 +20,20 @@ export class AuthService {
   private router = inject(Router);
   private uiService = inject(UiService);
   private errorService = inject(ErrorService);
+  private guestMode = false;
 
   user$ = user(this.auth);
   private guestMode$ = new BehaviorSubject<boolean>(false);
 
   constructor() {}
+
+  setGuestMode(isGuest: boolean) {
+    this.guestMode = isGuest;
+  }
+
+  getCurrentUser() {
+    return this.auth.currentUser;
+  }
 
   /**
    * Create a new user account with email and password.

@@ -1,20 +1,12 @@
 <section>
-  <!-- <div class="head_wrapper">
-    <img class="logo_img" src="/img/log_in/logo_desktop.png" alt="Logo" />
-
-    <div class="sign_up_desktop">
-      <p>Not a Join user?</p>
-      <button class="button_full" (click)="uiService.navigate('signup')">Sign up</button>
-    </div>
-  </div> -->
-
+  
   <div class="card card_wrapper">
     <h1>
       Log in
       <div class="seperator"></div>
     </h1>
 
-    <form class="login_form">
+    <!-- <form class="login_form">
       <div class="input_layout">
         <div class="input_field">
           <input
@@ -68,7 +60,111 @@
           </button>
         </div>
       </div>
+    </form> -->
+
+    <form class="login_form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="input_layout">
+        <!-- E-Mail -->
+        <div class="input_field">
+          <input
+            autocomplete="email"
+            placeholder="E-Mail"
+            formControlName="email"
+            required
+          />
+          <label>E-Mail</label>
+          <button
+            type="button"
+            class="clear"
+            *ngIf="loginForm.get('email')?.value"
+            (click)="loginForm.get('email')?.setValue('')"
+          >
+            &times;
+          </button>
+          <div class="icon">
+            <img src="/img/log_in/mail.png" alt="E-Mail" />
+          </div>
+          <!-- Fehleranzeige -->
+          <div
+            *ngIf="
+              loginForm.get('email')?.invalid && loginForm.get('email')?.touched
+            "
+            class="error"
+          >
+            Bitte eine gültige E-Mail-Adresse eingeben.
+          </div>
+        </div>
+
+        <!-- Passwort -->
+        <div class="input_field" id="pwField">
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+            required
+          />
+          <label>Password</label>
+          <button
+            type="button"
+            class="clear"
+            *ngIf="loginForm.get('password')?.value"
+            (click)="loginForm.get('password')?.setValue('')"
+          >
+            &times;
+          </button>
+          <div class="icon">
+            <img id="logInpwIcon" src="/img/log_in/lock.png" alt="Lock" />
+          </div>
+          <!-- Fehleranzeige -->
+          <div
+            *ngIf="
+              loginForm.get('password')?.invalid &&
+              loginForm.get('password')?.touched
+            "
+            class="error"
+          >
+            Passwort ist erforderlich.
+          </div>
+        </div>
+
+        <!-- Remember Me -->
+        <div class="password_check">
+          <label class="password_checkbox">
+            <input
+              type="checkbox"
+              formControlName="rememberMe"
+              (change)="onRememberMeChange()"
+            />
+            <img
+              src="img/log_in/unchecked.png"
+              alt="Checkbox aktiv"
+              class="checkmark"
+            />
+          </label>
+          <p>Remember me</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons_wrapper">
+          <button
+            type="submit"
+            class="button_full"
+            [disabled]="!loginForm.valid"
+          >
+            Log in
+          </button>
+          <button (click)="guestLogin()" class="button_empty" type="button">
+            Guest log in
+          </button>
+        </div>
+
+        <!-- Globale Fehlermeldung -->
+        <div *ngIf="errorMessage" class="error">
+          {{ errorMessage }}
+        </div>
+      </div>
     </form>
   </div>
-  
+
 </section>
