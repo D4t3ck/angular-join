@@ -70,7 +70,7 @@ h1 {
         &:not(:placeholder-shown) ~ label {
           transform: translateY(-2.1rem) scale(0.8);
           color: $clr_light_blue;
-          background: white;
+          background: $clr_card;
         }
 
         &:focus-visible {
@@ -133,7 +133,7 @@ h1 {
     }
   }
 
-  >p {
+  > p {
     font-size: 15px;
   }
 }

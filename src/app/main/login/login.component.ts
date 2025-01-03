@@ -113,5 +113,5 @@ export class LoginComponent {
 
   logInUser() {
     this.uiService.navigate('summary', true);
-  } // TODO: Funktion implementieren und mit auth verknüpfen
+  } 
 }

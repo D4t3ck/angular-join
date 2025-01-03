@@ -1,5 +1,4 @@
 <section>
-  
   <div class="card card_wrapper">
     <h1>
       Log in
@@ -84,15 +83,11 @@
           <div class="icon">
             <img src="/img/log_in/mail.png" alt="E-Mail" />
           </div>
-          <!-- Fehleranzeige -->
-          <div
-            *ngIf="
-              loginForm.get('email')?.invalid && loginForm.get('email')?.touched
-            "
-            class="error"
-          >
-            Bitte eine gültige E-Mail-Adresse eingeben.
-          </div>
+
+          @if(loginForm.get('email')?.invalid &&
+          loginForm.get('email')?.touched){
+          <div class="error">Bitte eine gültige E-Mail-Adresse eingeben.</div>
+          }
         </div>
 
         <!-- Passwort -->
@@ -116,16 +111,11 @@
           <div class="icon">
             <img id="logInpwIcon" src="/img/log_in/lock.png" alt="Lock" />
           </div>
-          <!-- Fehleranzeige -->
-          <div
-            *ngIf="
-              loginForm.get('password')?.invalid &&
-              loginForm.get('password')?.touched
-            "
-            class="error"
-          >
-            Passwort ist erforderlich.
-          </div>
+
+          @if( loginForm.get('password')?.invalid &&
+          loginForm.get('password')?.touched){
+          <div class="error">Passwort ist erforderlich.</div>
+          }
         </div>
 
         <!-- Remember Me -->
@@ -159,12 +149,10 @@
           </button>
         </div>
 
-        <!-- Globale Fehlermeldung -->
-        <div *ngIf="errorMessage" class="error">
-          {{ errorMessage }}
-        </div>
+        @if(errorMessage){
+        <div class="error">{{ errorMessage }}</div>
+        }
       </div>
     </form>
   </div>
-
 </section>
