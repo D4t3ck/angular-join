@@ -1,5 +1,5 @@
 import { AuthService } from '../../shared/services/auth.service';
-import { Component, inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -113,5 +113,5 @@ export class LoginComponent {
 
   logInUser() {
     this.uiService.navigate('summary', true);
-  } 
+  }
 }

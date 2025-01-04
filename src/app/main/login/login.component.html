@@ -5,65 +5,8 @@
       <div class="seperator"></div>
     </h1>
 
-    <!-- <form class="login_form">
-      <div class="input_layout">
-        <div class="input_field">
-          <input
-            autocomplete="email"
-            placeholder="E-Mail "
-            formControlName="email"
-            required
-          />
-          <label>E-Mail</label>
-          <div class="icon">
-            <img src="/img/log_in/mail.png" alt="E-Mail" />
-          </div>
-        </div>
-
-        <div class="input_field" id="pwField">
-          <input
-            id="password"
-            autocomplete="current-password"
-            type="password"
-            placeholder=" Password"
-            formControlName="password"
-            required
-          />
-          <label>Password</label>
-          <div class="icon">
-            <img id="logInpwIcon" src="/img/log_in/lock.png" alt="Lock" />
-          </div>
-        </div>
-
-        <div class="password_check">
-          <label class="password_checkbox">
-            <input
-              type="checkbox"
-              required
-              aria-label="Remember my password"
-              required
-            />
-            <img
-              src="img/log_in/unchecked.png"
-              alt="Checkbox aktiv"
-              class="checkmark"
-            />
-          </label>
-          <p>Remember my password</p>
-        </div>
-
-        <div class="buttons_wrapper">
-          <button class="button_full">Log in</button>
-          <button class="button_empty" (click)="logInUser()">
-            Guest Log in
-          </button>
-        </div>
-      </div>
-    </form> -->
-
     <form class="login_form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="input_layout">
-        <!-- E-Mail -->
         <div class="input_field">
           <input
             autocomplete="email"
@@ -90,7 +33,6 @@
           }
         </div>
 
-        <!-- Passwort -->
         <div class="input_field" id="pwField">
           <input
             id="password"
@@ -118,7 +60,6 @@
           }
         </div>
 
-        <!-- Remember Me -->
         <div class="password_check">
           <label class="password_checkbox">
             <input
@@ -135,7 +76,6 @@
           <p>Remember me</p>
         </div>
 
-        <!-- Buttons -->
         <div class="buttons_wrapper">
           <button
             type="submit"
