@@ -27,11 +27,12 @@
             <img src="/img/log_in/mail.png" alt="E-Mail" />
           </div>
 
+        </div>
+
           @if(loginForm.get('email')?.invalid &&
           loginForm.get('email')?.touched){
           <div class="error">Bitte eine gültige E-Mail-Adresse eingeben.</div>
           }
-        </div>
 
         <div class="input_field" id="pwField">
           <input
@@ -54,11 +55,12 @@
             <img id="logInpwIcon" src="/img/log_in/lock.png" alt="Lock" />
           </div>
 
-          @if( loginForm.get('password')?.invalid &&
+        </div>
+
+          @if(loginForm.get('password')?.invalid &&
           loginForm.get('password')?.touched){
           <div class="error">Passwort ist erforderlich.</div>
           }
-        </div>
 
         <div class="password_check">
           <label class="password_checkbox">
