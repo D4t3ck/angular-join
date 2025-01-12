@@ -17,7 +17,7 @@
           <label>E-Mail</label>
           <button
             type="button"
-            class="clear"
+            class="clearBtn"
             *ngIf="loginForm.get('email')?.value"
             (click)="loginForm.get('email')?.setValue('')"
           >
@@ -26,13 +26,11 @@
           <div class="icon">
             <img src="/img/log_in/mail.png" alt="E-Mail" />
           </div>
-
         </div>
 
-          @if(loginForm.get('email')?.invalid &&
-          loginForm.get('email')?.touched){
-          <div class="error">Bitte eine gültige E-Mail-Adresse eingeben.</div>
-          }
+        @if(loginForm.get('email')?.invalid && loginForm.get('email')?.touched){
+        <div class="error">Bitte eine gültige E-Mail-Adresse eingeben.</div>
+        }
 
         <div class="input_field" id="pwField">
           <input
@@ -45,7 +43,7 @@
           <label>Password</label>
           <button
             type="button"
-            class="clear"
+            class="clearBtn"
             *ngIf="loginForm.get('password')?.value"
             (click)="loginForm.get('password')?.setValue('')"
           >
@@ -54,13 +52,12 @@
           <div class="icon">
             <img id="logInpwIcon" src="/img/log_in/lock.png" alt="Lock" />
           </div>
-
         </div>
 
-          @if(loginForm.get('password')?.invalid &&
-          loginForm.get('password')?.touched){
-          <div class="error">Passwort ist erforderlich.</div>
-          }
+        @if(loginForm.get('password')?.invalid &&
+        loginForm.get('password')?.touched){
+        <div class="error">Passwort ist erforderlich.</div>
+        }
 
         <div class="password_check">
           <label class="password_checkbox">
