@@ -46,30 +46,23 @@ export class LoginComponent {
   }
 
   ngOnDestroy() {
-    this.saveToLocalStorage();
+    this.onRememberMeChange();
   }
+  
 
   onRememberMeChange() {
-    const { email, password, rememberMe } = this.loginForm.value;
-    if (rememberMe) {
-      localStorage.setItem('email', email || '');
-      localStorage.setItem('password', password || '');
-      localStorage.setItem('rememberMe', 'true');
-    } else {
-      localStorage.removeItem('email');
-      localStorage.removeItem('password');
-      localStorage.setItem('rememberMe', 'false');
-    }
-  }
+  const { email, password, rememberMe } = this.loginForm.value;
 
-  saveToLocalStorage() {
-    const { email, password, rememberMe } = this.loginForm.value;
-    if (rememberMe) {
-      localStorage.setItem('email', email || '');
-      localStorage.setItem('password', password || '');
-      localStorage.setItem('rememberMe', 'true');
-    }
+  if (rememberMe) {
+    localStorage.setItem('email', email || '');
+    localStorage.setItem('password', password || '');
+    localStorage.setItem('rememberMe', 'true');
+  } else {
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
+    localStorage.setItem('rememberMe', 'false');
   }
+}
 
   async onSubmit() {
     if (!this.loginForm.valid) {
@@ -86,7 +79,7 @@ export class LoginComponent {
         this.errorMessage = '';
 
         if (rememberMe) {
-          this.saveToLocalStorage();
+          this.onRememberMeChange();
         }
       } catch (error) {
         this.errorService.handleFirebaseError(error as FirebaseError);
