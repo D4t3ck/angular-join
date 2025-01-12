@@ -21,6 +21,7 @@ export class LoginComponent {
   uiService = inject(UiService);
   private errorService = inject(ErrorService);
 
+  passwordVisible: boolean = false;
   errorMessage: string = '';
 
   loginForm = new FormGroup({
@@ -48,21 +49,20 @@ export class LoginComponent {
   ngOnDestroy() {
     this.onRememberMeChange();
   }
-  
 
   onRememberMeChange() {
-  const { email, password, rememberMe } = this.loginForm.value;
+    const { email, password, rememberMe } = this.loginForm.value;
 
-  if (rememberMe) {
-    localStorage.setItem('email', email || '');
-    localStorage.setItem('password', password || '');
-    localStorage.setItem('rememberMe', 'true');
-  } else {
-    localStorage.removeItem('email');
-    localStorage.removeItem('password');
-    localStorage.setItem('rememberMe', 'false');
+    if (rememberMe) {
+      localStorage.setItem('email', email || '');
+      localStorage.setItem('password', password || '');
+      localStorage.setItem('rememberMe', 'true');
+    } else {
+      localStorage.removeItem('email');
+      localStorage.removeItem('password');
+      localStorage.setItem('rememberMe', 'false');
+    }
   }
-}
 
   async onSubmit() {
     if (!this.loginForm.valid) {
@@ -84,6 +84,16 @@ export class LoginComponent {
       } catch (error) {
         this.errorService.handleFirebaseError(error as FirebaseError);
       }
+    }
+  }
+
+  togglePasswordVisibility() {
+    this.passwordVisible = !this.passwordVisible;
+    const passwordField = document.getElementById(
+      'password'
+    ) as HTMLInputElement;
+    if (passwordField) {
+      passwordField.type = this.passwordVisible ? 'text' : 'password';
     }
   }
 
