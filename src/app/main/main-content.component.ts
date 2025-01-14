@@ -6,11 +6,10 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 @Component({
-  selector: 'app-main-content',
-  standalone: true,
-  imports: [RouterModule, LoginComponent, SignUpComponent],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss',
+    selector: 'app-main-content',
+    imports: [RouterModule, LoginComponent, SignUpComponent],
+    templateUrl: './main-content.component.html',
+    styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
   router = inject(Router);

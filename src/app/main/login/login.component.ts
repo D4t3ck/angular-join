@@ -10,10 +10,10 @@ import { ErrorService } from '../../shared/services/error.service';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
   imports: [RouterModule, FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
+  standalone: true,
 })
 export class LoginComponent {
   router = inject(Router);

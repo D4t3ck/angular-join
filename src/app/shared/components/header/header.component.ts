@@ -7,12 +7,11 @@ import { MenuService } from '../../services/menu.service';
 import { slideInOut } from '../../animations';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
-  animations: [slideInOut],
+    selector: 'app-header',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss',
+    animations: [slideInOut]
 })
 export class HeaderComponent {
   router = inject(Router);
