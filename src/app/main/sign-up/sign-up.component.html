@@ -48,7 +48,7 @@
           <div class="icon">
             <img
               id="logInpwIcon"
-              (click)="togglePasswordVisibility()"
+              (click)="toggleVisibility('password', passwordVisible)"
               src="/img/log_in/lock.png"
               alt="Lock"
             />
@@ -68,7 +68,8 @@
           <div class="icon">
             <img
               id="logInpwIcon"
-              (click)="toggleConfirmPasswordVisibility()"
+              (click)="
+                toggleVisibility('passwordConfirm', confirmPwdVisible)"
               src="/img/log_in/lock.png"
               alt="Lock"
             />

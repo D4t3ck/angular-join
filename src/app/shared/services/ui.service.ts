@@ -31,11 +31,11 @@ export class UiService {
     this.navbarVisible = !this.navbarVisible;
   }
 
-  toggleSignUp(){
+  toggleSignUp() {
     this.showSignUp = !this.showSignUp;
   }
 
-  closeSignUp(){
+  closeSignUp() {
     this.showSignUp = false;
   }
 
@@ -63,11 +63,13 @@ export class UiService {
     }
   }
 
-  togglePasswordVisibility(passwordFieldId: string, isVisible: boolean): boolean {
-    const passwordField = document.getElementById(passwordFieldId) as HTMLInputElement;
+  togglePasswordVisibility(fieldId: string, isVisible: boolean): boolean {
+    const passwordField = document.getElementById(fieldId) as HTMLInputElement;
+
     if (passwordField) {
-      passwordField.type = isVisible ? 'text' : 'password';
+      passwordField.type = isVisible ? 'password' : 'text';
     }
+
     return !isVisible;
   }
 }
