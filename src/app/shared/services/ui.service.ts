@@ -62,4 +62,12 @@ export class UiService {
       this.location.back();
     }
   }
+
+  togglePasswordVisibility(passwordFieldId: string, isVisible: boolean): boolean {
+    const passwordField = document.getElementById(passwordFieldId) as HTMLInputElement;
+    if (passwordField) {
+      passwordField.type = isVisible ? 'text' : 'password';
+    }
+    return !isVisible;
+  }
 }
