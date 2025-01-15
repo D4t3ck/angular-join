@@ -87,14 +87,11 @@ export class LoginComponent {
     }
   }
 
-  togglePasswordVisibility() {
-    this.passwordVisible = !this.passwordVisible;
-    const passwordField = document.getElementById(
-      'password'
-    ) as HTMLInputElement;
-    if (passwordField) {
-      passwordField.type = this.passwordVisible ? 'text' : 'password';
-    }
+  toggleVisibility() {
+    this.passwordVisible = this.uiService.togglePasswordVisibility(
+      'password',
+      this.passwordVisible
+    );
   }
 
   guestLogin() {

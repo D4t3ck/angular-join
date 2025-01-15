@@ -46,7 +46,12 @@
           />
           <label>Password</label>
           <div class="icon">
-            <img id="logInpwIcon" src="/img/log_in/lock.png" alt="Lock" />
+            <img
+              id="logInpwIcon"
+              (click)="togglePasswordVisibility()"
+              src="/img/log_in/lock.png"
+              alt="Lock"
+            />
           </div>
         </div>
 
@@ -61,7 +66,12 @@
           />
           <label>Confirm Password</label>
           <div class="icon">
-            <img id="logInpwIcon" src="/img/log_in/lock.png" alt="Lock" />
+            <img
+              id="logInpwIcon"
+              (click)="toggleConfirmPasswordVisibility()"
+              src="/img/log_in/lock.png"
+              alt="Lock"
+            />
           </div>
         </div>
 
