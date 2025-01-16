@@ -112,7 +112,15 @@ section {
         transition: transform 0.4s ease, color 0.4s ease;
       }
 
-      .icon {
+      .clearBtn {
+        @include curserPointer;
+        border: unset;
+        background-color: $clr_card;
+        color: $clr_font_light_grey;
+        font-size: 1.5rem;
+      }
+
+      .input_icon {
         display: flex;
         align-items: center;
       }
