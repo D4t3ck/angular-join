@@ -14,22 +14,5 @@ export class SignUpComponent {
   authService = inject(AuthService);
   uiService = inject(UiService);
 
-  passwordVisible: boolean = false;
-  confirmPwdVisible: boolean = false;
-
   constructor() {}
-
-  toggleVisibility(fieldId: string, isVisible: boolean) {
-    if (fieldId === 'password') {
-      this.passwordVisible = this.uiService.togglePasswordVisibility(
-        fieldId,
-        isVisible
-      );
-    } else if (fieldId === 'passwordConfirm') {
-      this.confirmPwdVisible = this.uiService.togglePasswordVisibility(
-        fieldId,
-        isVisible
-      );
-    }
-  }
 }

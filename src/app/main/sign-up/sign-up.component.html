@@ -48,7 +48,7 @@
           <div class="icon">
             <img
               id="logInpwIcon"
-              (click)="toggleVisibility('password', passwordVisible)"
+              (click)="uiService.togglePasswordVisibility('password')"
               src="/img/log_in/lock.png"
               alt="Lock"
             />
@@ -68,8 +68,7 @@
           <div class="icon">
             <img
               id="logInpwIcon"
-              (click)="
-                toggleVisibility('passwordConfirm', confirmPwdVisible)"
+              (click)="uiService.togglePasswordVisibility('passwordConfirm')"
               src="/img/log_in/lock.png"
               alt="Lock"
             />

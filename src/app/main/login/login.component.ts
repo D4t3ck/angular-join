@@ -21,7 +21,6 @@ export class LoginComponent {
   uiService = inject(UiService);
   private errorService = inject(ErrorService);
 
-  passwordVisible: boolean = false;
   errorMessage: string = '';
 
   loginForm = new FormGroup({
@@ -85,13 +84,6 @@ export class LoginComponent {
         this.errorService.handleFirebaseError(error as FirebaseError);
       }
     }
-  }
-
-  toggleVisibility() {
-    this.passwordVisible = this.uiService.togglePasswordVisibility(
-      'password',
-      this.passwordVisible
-    );
   }
 
   guestLogin() {
