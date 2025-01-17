@@ -139,11 +139,11 @@ h1 {
     }
 
     input[type="checkbox"]:not(:checked) + .checkmark {
-      content: url("../../../../public/img/log_in/unchecked.png");
+      content: url("../../../../public/img/log_in/unchecked.svg");
     }
 
     input[type="checkbox"]:checked + .checkmark {
-      content: url("../../../../public/img/log_in/checked.png");
+      content: url("../../../../public/img/log_in/checked.svg");
     }
   }
 
