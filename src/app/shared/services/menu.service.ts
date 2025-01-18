@@ -11,23 +11,23 @@ export class MenuService {
     {
       routerLink: '/summary',
       name: 'Summary',
-      icon: 'summary.png',
+      icon: 'summary.svg',
     },
     {
       routerLink: '/add-task',
       name: 'Add Task',
-      icon: 'addTask.png',
+      icon: 'addTask.svg',
     },
     {
       routerLink: '/board',
       name: 'Board',
-      icon: 'board.png',
+      icon: 'board.svg',
     },
 
     {
       routerLink: '/contacts',
       name: 'Contacts',
-      icon: 'contacts.png',
+      icon: 'contacts.svg',
     },
   ];
 
