@@ -3,13 +3,11 @@
 @import "../../shared/SCSS/variables.scss";
 
 section {
-  @include randomBorder;
   display: flex;
   height: calc(100dvh - 6rem);
   margin-left: 14rem;
 
   .contact_list {
-    background-color: lightblue;
     @include flexbox($fd:column, $jc: unset);
     width: 28.5rem;
     box-shadow: 0px 0 4px 0px rgba(0, 0, 0, 0.1);
@@ -26,10 +24,18 @@ section {
         height: 56px;
       }
     }
+
+    .contact_list_scroll {
+      @include flexbox($jc:flex-start ,$fd: column);
+      width: 400px;
+      height: calc(100vh - 197px);
+      margin-top: 101px;
+      overflow: auto;
+      scrollbar-width: thin;
+    }
   }
 
   .contact_details {
-    background-color: lightgoldenrodyellow;
     @include flexbox($fd:column, $jc: unset);
     flex: 1;
     margin-right: 10rem;
