@@ -5,12 +5,13 @@
 section {
   display: flex;
   height: calc(100dvh - 6rem);
-  margin-left: 14rem;
+  margin-left: 12.5rem;
 
   .contact_list {
-    @include flexbox($fd:column, $jc: unset);
+    @include flexbox($fd: column, $jc: unset);
     width: 28.5rem;
-    box-shadow: 0px 0 4px 0px rgba(0, 0, 0, 0.1);
+    background-color: $clr_card;
+    box-shadow: 2px 1px 3px 0px rgba(0, 0, 0, 0.1);
 
     .button_wrapper {
       @include flexbox;
@@ -26,7 +27,7 @@ section {
     }
 
     .contact_list_scroll {
-      @include flexbox($jc:flex-start ,$fd: column);
+      @include flexbox($jc: flex-start, $fd: column);
       width: 400px;
       height: calc(100vh - 197px);
       margin-top: 101px;
@@ -35,9 +36,35 @@ section {
     }
   }
 
-  .contact_details {
-    @include flexbox($fd:column, $jc: unset);
-    flex: 1;
+  .contact_detail {
+    @include flexbox($fd: column, $jc: unset);
     margin-right: 10rem;
+
+    .contacts_detail_head {
+      display: flex;
+      align-items: center;
+      height: 73px;
+      gap: 30px;
+      margin-left: 60px;
+      margin-top: 100px;
+
+      h1 {
+        font-weight: 700;
+        font-size: 3.8rem;
+      }
+
+      .seperator {
+        height: 0px;
+        width: 3.75rem;
+        rotate: 90deg;
+        border-bottom: 3px solid $clr_light_blue;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 27px;
+        color: $clr_dark_gray;
+      }
+    }
   }
 }
