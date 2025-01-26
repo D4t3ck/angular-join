@@ -125,17 +125,13 @@ section {
               cursor: pointer;
 
               > img {
-                width: 24px;
-                height: 24px;
+                height: 2cap;
+                aspect-ratio: 1;
               }
 
-              span {
+              > span {
                 color: $clr_dark_gray;
-                font-family: Inter;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 120%;
+                font-size: 1rem;
               }
             }
           }
