@@ -23,6 +23,11 @@ section {
         @include flexbox($g: 1rem);
         width: 352px;
         height: 56px;
+
+        > img {
+          height: 2cap;
+          aspect-ratio: 1;
+        }
       }
     }
 
@@ -38,6 +43,7 @@ section {
 
   .contact_detail {
     @include flexbox($fd: column, $jc: unset);
+    margin-top: 100px;
     margin-right: 10rem;
 
     .contacts_detail_head {
@@ -66,12 +72,10 @@ section {
       }
     }
 
-    .contacts_information {
-      @include randomBorder;
+    .contacts_information_container {
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 364px;
       margin-top: 60px;
       margin-left: 50px;
 
@@ -135,6 +139,20 @@ section {
               }
             }
           }
+        }
+      }
+
+      .contacts_information {
+        .h2 {
+          margin-top: 32px;
+          font-size: 20px;
+          font-weight: 400;
+          margin-bottom: 32px;
+        }
+
+        h5 {
+          font-size: 1rem;
+          font-weight: 700;
         }
       }
     }
