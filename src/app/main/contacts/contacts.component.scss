@@ -16,13 +16,13 @@ section {
     .button_wrapper {
       @include flexbox;
       position: fixed;
-      top: 101px;
-      height: 101px;
+      top: 6.3rem;
+      height: 6.3rem;
 
       .add_contact_btn {
         @include flexbox($g: 1rem);
-        width: 352px;
-        height: 56px;
+        width: 22rem;
+        height: 3.5rem;
 
         > img {
           height: 2cap;
@@ -33,9 +33,9 @@ section {
 
     .contact_list_scroll {
       @include flexbox($jc: flex-start, $fd: column);
-      width: 400px;
-      height: calc(100vh - 197px);
-      margin-top: 101px;
+      width: 25rem;
+      height: calc(100vh - 12.3rem);
+      margin-top: 6.3rem;
       overflow: auto;
       scrollbar-width: thin;
     }
@@ -43,14 +43,12 @@ section {
 
   .contact_detail {
     @include flexbox($fd: column, $jc: unset);
-    margin-top: 100px;
-    margin-right: 10rem;
+    margin: 100px 160px 0 0;
 
     .contacts_detail_head {
       display: flex;
       align-items: center;
-      height: 101px;
-      gap: 30px;
+      height: 6.3rem;
       margin-left: 60px;
 
       h1 {
@@ -65,9 +63,9 @@ section {
         border-bottom: 3px solid $clr_light_blue;
       }
 
-      span {
+      > span {
         font-weight: 400;
-        font-size: 27px;
+        font-size: 2rem;
         color: $clr_dark_gray;
       }
     }
@@ -76,56 +74,44 @@ section {
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin-top: 60px;
-      margin-left: 50px;
+      margin: 60px 0 0 50px;
 
       .co_inf_head {
         display: flex;
         align-items: center;
-        gap: 54px;
-        width: max-content;
+        gap: 2rem;
+        width: 100%;
 
         .profil_info {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 120px;
-          height: 120px;
+          @include flexbox();
+          width: 7.5rem;
+          height: 7.5rem;
+          margin: 0 0 32px 0;
           background-color: #ff7a00;
-          border: 3px solid #ffffff;
           border-radius: 70px;
-          gap: 10px;
           color: #ffffff;
-          margin-left: 20px;
-          font-size: 47px;
-          margin-bottom: 32px;
 
           span {
-            font-size: 47px;
+            font-size: 3rem;
             font-weight: 500;
           }
         }
 
         .profil_name {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
+          @include flexbox($fd: column, $ai: flex-start);
 
           span {
-            font-size: 47px;
+            font-size: 3rem;
             font-weight: 500;
           }
 
           .profil_edit_delete {
             display: flex;
             align-items: center;
-            gap: 13px;
+            gap: 1rem;
 
             .edit_area {
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              gap: 8px;
+              @include flexbox($g: 0.5rem);
               cursor: pointer;
 
               > img {
@@ -143,11 +129,10 @@ section {
       }
 
       .contacts_information {
-        .h2 {
-          margin-top: 32px;
-          font-size: 20px;
+        h2 {
+          margin: 32px 0 32px 0;
+          font-size: 1.5rem;
           font-weight: 400;
-          margin-bottom: 32px;
         }
 
         h5 {
