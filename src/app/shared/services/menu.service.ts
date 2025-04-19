@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Menu, UserInf } from '../interfaces/menu';
+import { Menu } from '../interfaces/menu';
 
 @Injectable({
   providedIn: 'root',
@@ -31,19 +31,19 @@ export class MenuService {
     },
   ];
 
-  imprint: UserInf = {
+  imprint: Menu = {
     routerLink: '/imprint',
     name: 'Imprint',
     icon: '',
   };
 
-  privacyPolicy: UserInf = {
+  privacyPolicy: Menu = {
     routerLink: '/privacy-policy',
     name: 'Privacy Policy',
     icon: '',
   };
 
-  userHelp: UserInf = {
+  userHelp: Menu = {
     routerLink: '/user-help',
     name: 'Help',
     icon: 'help.png',
