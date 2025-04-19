@@ -46,6 +46,6 @@ export class MenuService {
   userHelp: Menu = {
     routerLink: '/user-help',
     name: 'Help',
-    icon: 'help.png',
+    icon: '',
   };
 }
